@@ -3,25 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Premium Mathematics Masterclass | Abhisek Sir</title>
+    <title>Premium Science Masterclass | Abhisek Sir</title>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
-        /* === Neon Green, Ivory & Yellow Theme === */
+        /* === Bright Neon Pink, White & Bright Mint Theme === */
         :root {
-            --bg-deep: #050806; 
-            --glass-bg: rgba(12, 18, 15, 0.75);
+            --bg-deep: #16020A; /* Deep Dark Core */
+            --glass-bg: rgba(30, 5, 15, 0.75);
             
-            /* Custom User Palette */
-            --neon-green: #39FF14;
-            --ivory: #FFFFF0;
-            --yellow: #FFEA00;
-            --bluish-mint: #00FFCC; 
+            /* Enhanced Brighter Pink Palette */
+            --dark-pink: #FF007F;  /* Hot Pink */
+            --bright-pink: #FF1493; /* Ultra Bright Neon Pink */
+            --white: #FFFFFF;
+            --bright-mint: #00FFCC; /* Vivid Mint for Highlights */
             
-            --glass-border: rgba(255, 255, 240, 0.15); 
+            --glass-border: rgba(255, 255, 255, 0.15); 
             
-            --text-main: var(--ivory);
-            --text-muted: rgba(255, 255, 240, 0.6);
+            --text-main: var(--white);
+            --text-muted: rgba(255, 255, 255, 0.65);
             
+            /* Enhanced Feedback Gradients */
             --correct-grad: linear-gradient(135deg, #065F46 0%, #047857 100%);
             --wrong-grad: linear-gradient(135deg, #991B1B 0%, #BE123C 100%);
             
@@ -45,27 +46,27 @@
         .ambient-canvas {
             position: fixed; top: 0; left: 0; width: 100vw; height: 100vh;
             z-index: -1; overflow: hidden; pointer-events: none;
-            background: radial-gradient(circle at 50% 0%, #0B110D 0%, var(--bg-deep) 100%);
+            background: radial-gradient(circle at 50% 0%, #2A0414 0%, var(--bg-deep) 100%);
         }
         .glow-orb {
             position: absolute; border-radius: 50%; filter: blur(150px);
             will-change: transform;
             animation: floatOrb 25s infinite alternate ease-in-out;
         }
-        .orb-left { width: 55vw; height: 55vw; background: rgba(57, 255, 20, 0.12); top: -15%; left: -20%; }
-        .orb-right { width: 50vw; height: 50vw; background: rgba(255, 234, 0, 0.1); bottom: -10%; right: -15%; animation-delay: -12s; }
-        .orb-center { width: 45vw; height: 45vw; background: rgba(255, 255, 240, 0.05); top: 20%; left: 25%; animation-delay: -5s; animation-duration: 30s;}
+        .orb-left { width: 55vw; height: 55vw; background: rgba(255, 20, 147, 0.18); top: -15%; left: -20%; }
+        .orb-right { width: 50vw; height: 50vw; background: rgba(255, 255, 255, 0.08); bottom: -10%; right: -15%; animation-delay: -12s; }
+        .orb-center { width: 45vw; height: 45vw; background: rgba(255, 0, 127, 0.12); top: 20%; left: 25%; animation-delay: -5s; animation-duration: 30s;}
 
         @keyframes floatOrb {
             0% { transform: translate3d(0, 0, 0) scale(1); }
             100% { transform: translate3d(8vw, 8vh, 0) scale(1.15); }
         }
 
-        /* === Highlights === */
+        /* === Highlights (Bright Mint) === */
         .highlight, .highlight-alt {
-            color: var(--bluish-mint);
+            color: var(--bright-mint);
             font-weight: 700;
-            text-shadow: 0 0 15px rgba(0, 255, 204, 0.6); 
+            text-shadow: 0 0 15px rgba(0, 255, 204, 0.7); 
             background: rgba(0, 255, 204, 0.15);
             padding: 2px 6px;
             border-radius: 4px;
@@ -74,7 +75,7 @@
         /* === Briefing Room === */
         .welcome-screen {
             position: fixed; top: 0; left: 0; width: 100vw; height: 100vh;
-            background: rgba(5, 8, 6, 0.95); backdrop-filter: blur(25px); -webkit-backdrop-filter: blur(25px);
+            background: rgba(15, 2, 8, 0.95); backdrop-filter: blur(25px); -webkit-backdrop-filter: blur(25px);
             display: flex; justify-content: center; align-items: flex-start;
             overflow-y: auto; padding: 40px 20px;
             z-index: 2000; transition: opacity 0.6s ease, visibility 0.6s;
@@ -83,32 +84,32 @@
         .welcome-screen.hidden { opacity: 0; visibility: hidden; }
 
         .briefing-card {
-            background: linear-gradient(180deg, rgba(20, 25, 22, 0.95), rgba(10, 15, 12, 0.98));
-            border: 1px solid var(--neon-green); border-radius: 20px;
+            background: linear-gradient(180deg, rgba(45, 10, 25, 0.95), rgba(20, 5, 12, 0.98));
+            border: 1px solid var(--bright-pink); border-radius: 20px;
             padding: 40px; max-width: 650px; width: 100%; text-align: center;
-            margin: auto; box-shadow: 0 20px 60px rgba(0,0,0,0.9), 0 0 30px rgba(57, 255, 20, 0.2);
+            margin: auto; box-shadow: 0 20px 60px rgba(0,0,0,0.9), 0 0 40px rgba(255, 20, 147, 0.3);
             will-change: transform; animation: pulseCard 4s infinite alternate ease-in-out;
         }
         @keyframes pulseCard { from { transform: scale(1); } to { transform: scale(1.015); } }
 
-        .briefing-title { font-family: var(--font-luxury); font-size: 2.5rem; color: var(--ivory); line-height: 1.1; margin-bottom: 5px; text-shadow: 0 4px 15px rgba(255, 255, 240, 0.3);}
-        .briefing-subtitle { color: var(--yellow); font-size: 0.85rem; font-weight: 700; letter-spacing: 5px; text-transform: uppercase; margin-bottom: 35px; }
+        .briefing-title { font-family: var(--font-luxury); font-size: 2.5rem; color: var(--white); line-height: 1.1; margin-bottom: 5px; text-shadow: 0 4px 15px rgba(255, 255, 255, 0.4);}
+        .briefing-subtitle { color: var(--bright-pink); font-size: 0.85rem; font-weight: 700; letter-spacing: 5px; text-transform: uppercase; margin-bottom: 35px; text-shadow: 0 0 10px rgba(255, 20, 147, 0.4);}
         
         .protocol-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-bottom: 35px; text-align: left; }
-        .protocol-item { background: rgba(255,255,240,0.03); border: 1px solid var(--glass-border); padding: 20px; border-radius: 12px; transition: transform 0.3s ease, border-color 0.3s; }
-        .protocol-item:hover { transform: translateY(-5px); border-color: var(--neon-green); background: rgba(57, 255, 20, 0.05);}
-        .protocol-icon { font-size: 1.6rem; margin-bottom: 12px; color: var(--yellow); }
-        .protocol-title { font-family: var(--font-luxury); font-size: 1.15rem; color: var(--ivory); margin-bottom: 6px; font-weight: 600; }
+        .protocol-item { background: rgba(255,255,255,0.04); border: 1px solid var(--glass-border); padding: 20px; border-radius: 12px; transition: transform 0.3s ease, border-color 0.3s; }
+        .protocol-item:hover { transform: translateY(-5px); border-color: var(--bright-pink); background: rgba(255, 20, 147, 0.1);}
+        .protocol-icon { font-size: 1.6rem; margin-bottom: 12px; color: var(--bright-pink); text-shadow: 0 0 10px rgba(255, 20, 147, 0.5);}
+        .protocol-title { font-family: var(--font-luxury); font-size: 1.15rem; color: var(--white); margin-bottom: 6px; font-weight: 600; }
         .protocol-desc { font-size: 0.85rem; color: var(--text-muted); line-height: 1.5; }
 
         .start-btn {
-            background: linear-gradient(135deg, var(--neon-green), #2BBF0F); color: #000;
+            background: linear-gradient(135deg, var(--bright-pink), var(--dark-pink)); color: var(--white);
             font-family: var(--font-ui); font-size: 1rem; font-weight: 700;
             padding: 16px 45px; border: none; border-radius: 100px;
             text-transform: uppercase; letter-spacing: 2px; cursor: pointer;
-            box-shadow: 0 10px 25px rgba(57, 255, 20, 0.4); transition: all 0.3s ease;
+            box-shadow: 0 10px 25px rgba(255, 20, 147, 0.5); transition: all 0.3s ease;
         }
-        .start-btn:hover { transform: scale(1.05) translateY(-2px); box-shadow: 0 15px 35px rgba(57, 255, 20, 0.6); }
+        .start-btn:hover { transform: scale(1.05) translateY(-2px); box-shadow: 0 15px 40px rgba(255, 20, 147, 0.7); }
 
         /* === Dashboard Header === */
         header {
@@ -120,8 +121,8 @@
 
         .title-wrapper h1 {
             font-family: var(--font-luxury); font-size: 3.2rem; line-height: 1.2;
-            background: linear-gradient(to right, var(--ivory), var(--neon-green), var(--yellow), var(--ivory));
-            background-size: 300% auto; -webkit-background-clip: text; color: transparent;
+            background: linear-gradient(to right, var(--white), var(--bright-pink), var(--white));
+            background-size: 200% auto; -webkit-background-clip: text; color: transparent;
             animation: shine 6s linear infinite; font-weight: 700; margin-bottom: 5px;
         }
         @keyframes shine { to { background-position: 200% center; } }
@@ -131,21 +132,21 @@
         }
         .title-wrapper p::after {
             content: ''; position: absolute; bottom: -10px; left: 0;
-            width: 50px; height: 3px; background: var(--yellow); border-radius: 3px;
-            box-shadow: 0 0 15px var(--yellow);
+            width: 50px; height: 3px; background: var(--bright-pink); border-radius: 3px;
+            box-shadow: 0 0 15px var(--bright-pink);
         }
 
         .hud-container { display: flex; gap: 15px; }
         .hud-box {
-            background: linear-gradient(145deg, rgba(20, 25, 22, 0.6), rgba(10, 12, 11, 0.8));
-            border: 1px solid var(--glass-border); border-top: 1px solid rgba(255, 255, 240, 0.4);
+            background: linear-gradient(145deg, rgba(45, 10, 25, 0.7), rgba(20, 5, 12, 0.9));
+            border: 1px solid var(--glass-border); border-top: 1px solid rgba(255, 255, 255, 0.4);
             border-radius: 16px; padding: 12px 25px; text-align: center;
             box-shadow: 0 10px 25px rgba(0,0,0,0.6); min-width: 130px;
             backdrop-filter: blur(10px);
         }
         .hud-box small { display: block; color: var(--text-muted); font-size: 0.65rem; letter-spacing: 2px; text-transform: uppercase; font-weight: 600; margin-bottom: 3px;}
-        .hud-box .hud-val { font-family: var(--font-luxury); font-size: 1.9rem; color: var(--neon-green); font-weight: 600; line-height: 1.2; text-shadow: 0 0 20px rgba(57, 255, 20, 0.3); }
-        .hud-box.warning .hud-val { color: #F87171; text-shadow: 0 0 20px rgba(248, 113, 113, 0.5); animation: pulseTime 1s infinite alternate; }
+        .hud-box .hud-val { font-family: var(--font-luxury); font-size: 1.9rem; color: var(--bright-pink); font-weight: 600; line-height: 1.2; text-shadow: 0 0 20px rgba(255, 20, 147, 0.5); }
+        .hud-box.warning .hud-val { color: #F87171; text-shadow: 0 0 20px rgba(248, 113, 113, 0.6); animation: pulseTime 1s infinite alternate; }
 
         @keyframes pulseTime { from { opacity: 0.5; } to { opacity: 1; } }
 
@@ -157,51 +158,51 @@
         .section-container.active { display: block; animation: slideIn 0.6s var(--smooth-ease) backwards; }
         @keyframes slideIn { from { opacity: 0; transform: translate3d(0, 30px, 0); } to { opacity: 1; transform: translate3d(0, 0, 0); } }
         
-        .section-banner { font-family: var(--font-luxury); font-size: 2.2rem; color: var(--yellow); margin: 50px 0 35px; text-align: center; text-shadow: 0 2px 10px rgba(0,0,0,0.8); }
+        .section-banner { font-family: var(--font-luxury); font-size: 2.2rem; color: var(--white); margin: 50px 0 35px; text-align: center; text-shadow: 0 2px 10px rgba(0,0,0,0.8); }
 
         /* === 3D Question Cards & Overlays === */
         .q-card {
             position: relative; overflow: hidden;
             background: var(--glass-bg); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
-            border: 1px solid var(--glass-border); border-top: 1px solid rgba(255, 234, 0, 0.3);
+            border: 1px solid var(--glass-border); border-top: 1px solid rgba(255, 255, 255, 0.3);
             border-radius: 20px; margin-bottom: 35px;
             box-shadow: 0 12px 35px rgba(0,0,0,0.6);
             transition: transform 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
         }
-        .q-card:hover { border-color: rgba(57, 255, 20, 0.5); box-shadow: 0 15px 45px rgba(0,0,0,0.8), 0 0 25px rgba(57, 255, 20, 0.15); }
+        .q-card:hover { border-color: rgba(255, 20, 147, 0.6); box-shadow: 0 15px 45px rgba(0,0,0,0.8), 0 0 30px rgba(255, 20, 147, 0.2); }
 
         /* Timer Lock Overlay */
         .q-lock-overlay {
-            position: absolute; inset: 0; background: rgba(5, 8, 6, 0.85);
+            position: absolute; inset: 0; background: rgba(15, 2, 8, 0.88);
             backdrop-filter: blur(8px); z-index: 10; display: flex; flex-direction: column;
             align-items: center; justify-content: center; text-align: center;
             transition: opacity 0.4s ease;
         }
-        .q-lock-overlay h3 { font-family: var(--font-luxury); color: var(--ivory); font-size: 1.5rem; margin-bottom: 15px;}
+        .q-lock-overlay h3 { font-family: var(--font-luxury); color: var(--white); font-size: 1.5rem; margin-bottom: 15px;}
         .unlock-btn {
-            background: transparent; border: 2px solid var(--bluish-mint); color: var(--bluish-mint);
+            background: transparent; border: 2px solid var(--bright-mint); color: var(--bright-mint);
             padding: 12px 30px; border-radius: 100px; font-family: var(--font-ui); font-size: 0.9rem; font-weight: 700;
             text-transform: uppercase; letter-spacing: 2px; cursor: pointer;
-            box-shadow: 0 0 15px rgba(0, 255, 204, 0.2); transition: all 0.3s;
+            box-shadow: 0 0 15px rgba(0, 255, 204, 0.3); transition: all 0.3s;
         }
-        .unlock-btn:hover { background: var(--bluish-mint); color: #000; box-shadow: 0 0 25px rgba(0, 255, 204, 0.5); }
+        .unlock-btn:hover { background: var(--bright-mint); color: #000; box-shadow: 0 0 30px rgba(0, 255, 204, 0.6); }
 
         .q-content { padding: 40px; transition: filter 0.4s ease; }
         .q-content.blurred { filter: blur(6px); pointer-events: none; opacity: 0.4; }
 
         .q-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 22px; }
         .q-badge {
-            background: rgba(255, 255, 240, 0.08); border: 1px solid var(--glass-border); color: var(--ivory);
+            background: rgba(255, 255, 255, 0.08); border: 1px solid var(--glass-border); color: var(--white);
             padding: 6px 16px; border-radius: 50px; font-size: 0.75rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase;
         }
         .q-timer {
-            font-family: var(--font-ui); font-size: 1.1rem; font-weight: 700; color: var(--neon-green);
-            background: rgba(57, 255, 20, 0.1); padding: 5px 15px; border-radius: 50px; border: 1px solid rgba(57,255,20,0.3);
-            text-shadow: 0 0 10px rgba(57,255,20,0.4); transition: color 0.3s;
+            font-family: var(--font-ui); font-size: 1.1rem; font-weight: 700; color: var(--bright-pink);
+            background: rgba(255, 20, 147, 0.1); padding: 5px 15px; border-radius: 50px; border: 1px solid rgba(255,20,147,0.4);
+            text-shadow: 0 0 10px rgba(255,20,147,0.5); transition: color 0.3s;
         }
         .q-timer.warning { color: #F87171; background: rgba(248, 113, 113, 0.1); border-color: rgba(248, 113, 113, 0.3); text-shadow: 0 0 10px rgba(248, 113, 113, 0.5); animation: pulseTime 0.8s infinite alternate;}
 
-        .q-text { font-family: var(--font-luxury); font-size: 1.6rem; font-weight: 500; color: var(--ivory); margin-bottom: 25px; line-height: 1.5; }
+        .q-text { font-family: var(--font-luxury); font-size: 1.45rem; font-weight: 500; color: var(--white); margin-bottom: 25px; line-height: 1.5; }
 
         /* === Options === */
         .options-container { display: flex; flex-direction: column; gap: 14px; }
@@ -210,29 +211,29 @@
             border-radius: 14px; padding: 20px 25px; cursor: pointer; text-align: left;
             transition: transform 0.3s ease, background 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
         }
-        .opt-btn:hover { background: rgba(57, 255, 20, 0.05); border-color: var(--neon-green); transform: translateX(6px); }
-        .opt-content { display: flex; justify-content: space-between; align-items: center; font-size: 1.1rem; color: var(--ivory); font-weight: 500; }
+        .opt-btn:hover { background: rgba(255, 20, 147, 0.08); border-color: var(--bright-pink); transform: translateX(6px); }
+        .opt-content { display: flex; justify-content: space-between; align-items: center; font-size: 1.1rem; color: var(--white); font-weight: 500; }
         
         .opt-btn.locked { pointer-events: none; opacity: 0.6; }
 
         .logic-panel { max-height: 0; opacity: 0; overflow: hidden; transition: max-height 0.5s ease, opacity 0.4s ease; font-size: 0.95rem; line-height: 1.6; }
-        .opt-btn.active .logic-panel, .q-card.time-up .logic-panel.show-missed { max-height: 300px; opacity: 1; margin-top: 15px; padding-top: 15px; border-top: 1px dashed var(--glass-border); color: var(--ivory); }
+        .opt-btn.active .logic-panel, .q-card.time-up .logic-panel.show-missed { max-height: 300px; opacity: 1; margin-top: 15px; padding-top: 15px; border-top: 1px dashed var(--glass-border); color: var(--white); }
 
         .opt-btn.correct { background: var(--correct-grad); border-color: #34D399; opacity: 1;}
         .opt-btn.wrong { background: var(--wrong-grad); border-color: #F87171; opacity: 1;}
         .opt-btn.correct .opt-content, .opt-btn.wrong .opt-content { color: #FFF; font-weight: 500;}
 
-        /* Correct Answer Reveal */
+        /* Correct Answer Reveal (Using Bright Mint) */
         .opt-btn.reveal-correct {
-            border-color: var(--neon-green);
-            background: rgba(57, 255, 20, 0.1);
-            box-shadow: inset 0 0 10px rgba(57, 255, 20, 0.2), 0 0 15px rgba(57, 255, 20, 0.3);
+            border-color: var(--bright-mint);
+            background: rgba(0, 255, 204, 0.12);
+            box-shadow: inset 0 0 10px rgba(0, 255, 204, 0.3), 0 0 15px rgba(0, 255, 204, 0.4);
             opacity: 1 !important;
         }
         .opt-btn.reveal-correct .opt-content {
-            color: var(--neon-green);
+            color: var(--bright-mint);
             font-weight: 700;
-            text-shadow: 0 0 10px rgba(57, 255, 20, 0.4);
+            text-shadow: 0 0 12px rgba(0, 255, 204, 0.5);
         }
 
         .missed-alert { display: none; background: rgba(248, 113, 113, 0.15); border: 1px solid #F87171; border-radius: 12px; padding: 15px; margin-top: 15px; color: #FFF; font-weight: 600; text-align: center; }
@@ -240,8 +241,8 @@
         /* === Floating Dock === */
         .control-dock {
             position: fixed; bottom: 25px; left: 50%; transform: translate3d(-50%, 150px, 0);
-            background: rgba(10, 15, 12, 0.9); backdrop-filter: blur(25px); -webkit-backdrop-filter: blur(25px);
-            border: 1px solid var(--neon-green); border-top: 1px solid rgba(57, 255, 20, 0.5);
+            background: rgba(25, 5, 12, 0.95); backdrop-filter: blur(25px); -webkit-backdrop-filter: blur(25px);
+            border: 1px solid var(--dark-pink); border-top: 1px solid rgba(255, 20, 147, 0.5);
             border-radius: 100px; display: flex; align-items: center; justify-content: space-between;
             padding: 12px 18px; z-index: 100; box-shadow: 0 25px 60px rgba(0,0,0,0.95);
             width: max-content; max-width: 95%; transition: transform 0.8s var(--smooth-ease) 0.5s;
@@ -255,28 +256,28 @@
             font-size: 0.8rem; font-weight: 700; cursor: pointer; transition: all 0.3s;
             text-transform: uppercase; letter-spacing: 1px;
         }
-        .tab-btn:hover { color: var(--ivory); background: rgba(255, 255, 240, 0.1); }
-        .tab-btn.active { background: linear-gradient(135deg, var(--neon-green), #2BBF0F); color: #000; box-shadow: 0 5px 20px rgba(57, 255, 20, 0.4); }
+        .tab-btn:hover { color: var(--white); background: rgba(255, 255, 255, 0.1); }
+        .tab-btn.active { background: linear-gradient(135deg, var(--bright-pink), var(--dark-pink)); color: var(--white); box-shadow: 0 5px 20px rgba(255, 20, 147, 0.5); }
 
         .signature-block {
             display: flex; flex-direction: column; align-items: center;
             margin: 0 25px; border-left: 1px solid var(--glass-border); border-right: 1px solid var(--glass-border); padding: 0 25px;
         }
         .sig-sub { font-size: 0.55rem; font-weight: 700; color: var(--text-muted); letter-spacing: 4px; text-transform: uppercase; margin-bottom: 2px; }
-        .sig-main { font-family: var(--font-luxury); font-size: 1.2rem; color: var(--yellow); font-weight: 600; text-transform: uppercase; letter-spacing: 2px; text-shadow: 0 0 15px rgba(255, 234, 0, 0.4);}
+        .sig-main { font-family: var(--font-luxury); font-size: 1.2rem; color: var(--white); font-weight: 600; text-transform: uppercase; letter-spacing: 2px; text-shadow: 0 0 15px rgba(255, 255, 255, 0.5);}
 
         .report-btn {
-            background: rgba(255, 234, 0, 0.08); color: var(--yellow);
-            border: 1px solid var(--yellow); padding: 14px 25px; border-radius: 100px;
+            background: rgba(255, 255, 255, 0.08); color: var(--white);
+            border: 1px solid var(--white); padding: 14px 25px; border-radius: 100px;
             font-family: var(--font-ui); font-size: 0.8rem; font-weight: 700;
             text-transform: uppercase; letter-spacing: 1px; cursor: pointer; transition: all 0.3s ease; margin-left: 5px;
         }
-        .report-btn:hover { background: var(--yellow); color: #000; transform: scale(1.05); box-shadow: 0 8px 25px rgba(255, 234, 0, 0.4); border-color: transparent; }
+        .report-btn:hover { background: var(--white); color: #000; transform: scale(1.05); box-shadow: 0 8px 25px rgba(255, 255, 255, 0.5); border-color: transparent; }
 
         /* === Grand Report Modal Redesign === */
         .modal-wrap {
             position: fixed; top: 0; left: 0; width: 100vw; height: 100vh;
-            background: rgba(2, 4, 3, 0.95); backdrop-filter: blur(25px);
+            background: rgba(15, 2, 8, 0.95); backdrop-filter: blur(25px);
             display: flex; justify-content: center; align-items: center;
             z-index: 1000; opacity: 0; pointer-events: none; transition: opacity 0.5s ease;
             overflow-y: auto; padding: 20px;
@@ -284,43 +285,43 @@
         .modal-wrap.active { opacity: 1; pointer-events: all; }
         
         .modal-card {
-            background: linear-gradient(180deg, rgba(20, 25, 22, 1), rgba(10, 12, 11, 1)); 
-            border: 1px solid var(--neon-green); border-radius: 24px;
+            background: linear-gradient(180deg, rgba(45, 10, 25, 1), rgba(20, 5, 12, 1)); 
+            border: 1px solid var(--bright-pink); border-radius: 24px;
             padding: 40px; max-width: 600px; width: 100%; text-align: center; margin: auto;
-            box-shadow: 0 30px 90px rgba(0,0,0,1), 0 0 50px rgba(57, 255, 20, 0.15); 
+            box-shadow: 0 30px 90px rgba(0,0,0,1), 0 0 50px rgba(255, 20, 147, 0.2); 
             transform: translate3d(0, 30px, 0) scale(0.95); transition: transform 0.5s var(--smooth-ease);
         }
         .modal-wrap.active .modal-card { transform: translate3d(0, 0, 0) scale(1); }
         
         .mod-header { margin-bottom: 25px; }
-        .mod-title { font-family: var(--font-luxury); font-size: 2.2rem; color: var(--ivory); margin-bottom: 5px; line-height: 1.2; text-shadow: 0 4px 15px rgba(255, 255, 240, 0.2);}
-        .mod-subtitle { color: var(--yellow); font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 4px; }
+        .mod-title { font-family: var(--font-luxury); font-size: 2.2rem; color: var(--white); margin-bottom: 5px; line-height: 1.2; text-shadow: 0 4px 15px rgba(255, 255, 255, 0.3);}
+        .mod-subtitle { color: var(--bright-pink); font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 4px; text-shadow: 0 0 10px rgba(255, 20, 147, 0.4); }
 
         .score-hero { display: flex; justify-content: center; margin-bottom: 30px; }
         .score-ring { 
             width: 160px; height: 160px; border-radius: 50%; 
-            background: rgba(57, 255, 20, 0.05); border: 4px solid var(--neon-green);
+            background: rgba(255, 20, 147, 0.05); border: 4px solid var(--bright-pink);
             display: flex; flex-direction: column; justify-content: center; align-items: center;
-            box-shadow: 0 0 30px rgba(57, 255, 20, 0.3), inset 0 0 20px rgba(57, 255, 20, 0.2);
+            box-shadow: 0 0 30px rgba(255, 20, 147, 0.4), inset 0 0 20px rgba(255, 20, 147, 0.3);
         }
-        .score-ring h1 { font-family: var(--font-luxury); font-size: 2.8rem; color: var(--ivory); line-height: 1; text-shadow: 0 0 15px rgba(255, 255, 240, 0.5); margin-bottom: 5px;}
-        .score-ring span { font-size: 0.65rem; text-transform: uppercase; letter-spacing: 2px; color: var(--neon-green); font-weight: 700; }
+        .score-ring h1 { font-family: var(--font-luxury); font-size: 2.8rem; color: var(--white); line-height: 1; text-shadow: 0 0 15px rgba(255, 255, 255, 0.5); margin-bottom: 5px;}
+        .score-ring span { font-size: 0.65rem; text-transform: uppercase; letter-spacing: 2px; color: var(--bright-pink); font-weight: 700; }
 
         .new-stats-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-bottom: 30px; }
         .n-stat { background: rgba(0,0,0,0.4); border: 1px solid var(--glass-border); padding: 15px 10px; border-radius: 12px; display: flex; flex-direction: column; align-items: center; }
         .n-stat .label { font-size: 0.65rem; text-transform: uppercase; letter-spacing: 1px; color: var(--text-muted); margin-bottom: 5px; font-weight: 700; text-align: center;}
-        .n-stat .val { font-family: var(--font-ui); font-size: 1.5rem; font-weight: 700; color: var(--ivory); }
+        .n-stat .val { font-family: var(--font-ui); font-size: 1.5rem; font-weight: 700; color: var(--white); }
         
         .n-stat.correct-stat .val { color: #10B981; text-shadow: 0 0 10px rgba(16, 185, 129, 0.3); }
         .n-stat.wrong-stat .val { color: #F43F5E; text-shadow: 0 0 10px rgba(244, 63, 94, 0.3); }
 
-        .mod-desc { color: var(--ivory); font-size: 1rem; margin-bottom: 30px; font-weight: 500; line-height: 1.6; background: rgba(57, 255, 20, 0.05); padding: 20px; border-radius: 12px; border: 1px solid var(--glass-border);}
+        .mod-desc { color: var(--white); font-size: 1rem; margin-bottom: 30px; font-weight: 500; line-height: 1.6; background: rgba(255, 20, 147, 0.05); padding: 20px; border-radius: 12px; border: 1px solid var(--glass-border);}
 
         .mod-footer { display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--glass-border); padding-top: 25px; }
         .mod-footer .report-btn { margin: 0; padding: 14px 25px; }
         .mod-sig-block { text-align: right; }
         .mod-sig-block .sig-sub { display: block; font-size: 0.55rem; font-weight: 700; color: var(--text-muted); letter-spacing: 3px; text-transform: uppercase; margin-bottom: 4px; }
-        .mod-sig-block .sig-main { font-family: var(--font-luxury); font-size: 1.2rem; color: var(--yellow); font-weight: 600; text-transform: uppercase; letter-spacing: 2px; text-shadow: 0 0 10px rgba(255, 234, 0, 0.4);}
+        .mod-sig-block .sig-main { font-family: var(--font-luxury); font-size: 1.2rem; color: var(--white); font-weight: 600; text-transform: uppercase; letter-spacing: 2px; text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);}
 
         @media (max-width: 950px) {
             .protocol-grid { grid-template-columns: 1fr; gap: 12px; }
@@ -362,7 +363,7 @@
                 <div class="protocol-item">
                     <div class="protocol-icon">⏳</div>
                     <div class="protocol-title">II. Question Locking</div>
-                    <div class="protocol-desc">Each question allows exactly <span class="highlight-alt">60 seconds</span> to answer once unlocked, after which it permanently locks.</div>
+                    <div class="protocol-desc">Each question allows exactly <span class="highlight-alt">30 seconds</span> to answer once unlocked, after which it permanently locks.</div>
                 </div>
                 <div class="protocol-item">
                     <div class="protocol-icon">📊</div>
@@ -371,8 +372,8 @@
                 </div>
                 <div class="protocol-item">
                     <div class="protocol-icon">🧠</div>
-                    <div class="protocol-title">IV. Mental Arithmetic</div>
-                    <div class="protocol-desc">Calculations are designed for <span class="highlight-alt">mental execution</span>. Do not use external calculators.</div>
+                    <div class="protocol-title">IV. Confusing Logic</div>
+                    <div class="protocol-desc">Options are <span class="highlight-alt">designed to trick you</span>. Read carefully before locking in your answer.</div>
                 </div>
             </div>
 
@@ -383,8 +384,8 @@
     <!-- Dashboard -->
     <header>
         <div class="title-wrapper">
-            <h1>Mathematics</h1>
-            <p>Timed Mental Assessment</p>
+            <h1>Science Masterclass</h1>
+            <p>Advanced Skeletal System</p>
         </div>
         <div class="hud-container">
             <div class="hud-box" id="global-timer-box">
@@ -393,7 +394,7 @@
             </div>
             <div class="hud-box">
                 <small>Attempted</small>
-                <div class="hud-val" id="score-val">0/25</div>
+                <div class="hud-val" id="score-val">0/50</div>
             </div>
         </div>
     </header>
@@ -435,7 +436,7 @@
             <div class="new-stats-grid">
                 <div class="n-stat"><span class="label">Accuracy</span><span class="val" id="mod-acc-text">0%</span></div>
                 <div class="n-stat"><span class="label">Time Taken</span><span class="val" id="mod-time-text">0m 0s</span></div>
-                <div class="n-stat"><span class="label">Attempted</span><span class="val" id="mod-att-text">0/25</span></div>
+                <div class="n-stat"><span class="label">Attempted</span><span class="val" id="mod-att-text">0/50</span></div>
                 <div class="n-stat correct-stat"><span class="label">Correct (+2)</span><span class="val" id="mod-correct-text">0</span></div>
                 <div class="n-stat wrong-stat"><span class="label">Wrong (-1)</span><span class="val" id="mod-wrong-text">0</span></div>
                 <div class="n-stat"><span class="label">Skipped (0)</span><span class="val" id="mod-left-text">0</span></div>
@@ -465,51 +466,76 @@
         let lockedAnswers = new Set(); 
         let answeredQuestions = new Set(); // Track specifically what was clicked vs timed out
 
-        // 25 Questions tailored for mental math
+        // 50 Questions tailored for Class 5 Science (Tricky Options)
         const database = {
-            "ADD": [
-                { q: "Evaluate: <span class='highlight'>456 + 321</span>", opts: ["767", "777", "787", "677"], ans: 1 },
-                { q: "Evaluate: <span class='highlight'>582 + 249</span>", opts: ["821", "831", "841", "731"], ans: 1 },
-                { q: "Evaluate: <span class='highlight'>715 + 198</span>", opts: ["913", "903", "813", "923"], ans: 0 },
-                { q: "Evaluate: <span class='highlight'>347 + 424</span>", opts: ["761", "771", "781", "671"], ans: 1 },
-                { q: "Evaluate: <span class='highlight'>605 + 288</span>", opts: ["883", "893", "903", "793"], ans: 1 }
+            "BASICS": [
+                { q: "A newborn baby has around <span class='highlight'>300 bones</span>. What happens to these bones as the baby <span class='highlight-alt'>grows into an adult</span>?", opts: ["They join together", "They break down", "They shrink away", "They melt into muscles"], ans: 0 },
+                { q: "An adult human skeleton has exactly how many <span class='highlight'>bones</span>?", opts: ["206", "260", "204", "240"], ans: 0 },
+                { q: "Which of these is <span class='highlight-alt'>NOT</span> a main function of the <span class='highlight'>skeletal system</span>?", opts: ["Pumping blood to the body", "Giving shape and support", "Protecting delicate organs", "Helping the body move"], ans: 0 },
+                { q: "Bones are very hard on the outside. Which <span class='highlight'>two minerals</span> make them so hard?", opts: ["Calcium and Phosphorus", "Calcium and Iron", "Potassium and Iron", "Phosphorus and Zinc"], ans: 0 },
+                { q: "What is the <span class='highlight-alt'>soft, jelly-like substance</span> found strictly inside long bones called?", opts: ["Bone marrow", "Bone jelly", "Spongy marrow", "Blood jelly"], ans: 0 },
+                { q: "What highly important cells are produced inside the <span class='highlight'>bone marrow</span>?", opts: ["Blood cells", "Nerve cells", "Muscle cells", "Skin cells"], ans: 0 },
+                { q: "Which part of your body primarily contains <span class='highlight-alt'>long bones</span>?", opts: ["Arms and legs", "Skull and ribs", "Spine and wrist", "Ankles and toes"], ans: 0 },
+                { q: "Where can you specifically find <span class='highlight-alt'>short bones</span> in your body?", opts: ["Wrists and ankles", "Thighs and arms", "Skull and ribs", "Spine and chest"], ans: 0 },
+                { q: "Which of these is a <span class='highlight-alt'>flat bone</span> that acts like a helmet for your <span class='highlight'>brain</span>?", opts: ["Skull", "Pelvis", "Rib cage", "Shoulder blade"], ans: 0 },
+                { q: "In addition to the head, where else are <span class='highlight-alt'>flat bones</span> mainly found?", opts: ["Chest and shoulder blades", "Hands and feet only", "Arms and legs only", "Neck and lower back"], ans: 0 }
             ],
-            "SUB": [
-                { q: "Evaluate: <span class='highlight-alt'>85 - 42</span>", opts: ["33", "43", "53", "42"], ans: 1 },
-                { q: "Evaluate: <span class='highlight-alt'>73 - 28</span>", opts: ["45", "55", "35", "47"], ans: 0 },
-                { q: "Evaluate: <span class='highlight-alt'>92 - 37</span>", opts: ["65", "55", "45", "57"], ans: 1 },
-                { q: "Evaluate: <span class='highlight-alt'>64 - 19</span>", opts: ["35", "45", "55", "44"], ans: 1 },
-                { q: "Evaluate: <span class='highlight-alt'>81 - 56</span>", opts: ["35", "25", "15", "31"], ans: 1 }
+            "SPINE_RIBS": [
+                { q: "The skull is made of many bones fused together. Which is the <span class='highlight'>ONLY movable bone</span> in the skull?", opts: ["Lower jaw", "Upper jaw", "Inner jaw", "Outer jaw"], ans: 0 },
+                { q: "What is the natural shape of a healthy human <span class='highlight'>spine</span>?", opts: ["S-shape", "C-shape", "J-shape", "Straight line"], ans: 0 },
+                { q: "The <span class='highlight'>backbone</span> is scientifically known as the...", opts: ["Vertebral column", "Spinal cord", "Rib column", "Nervous column"], ans: 0 },
+                { q: "The spine is made up of small bones called <span class='highlight'>vertebrae</span>. How many form the backbone?", opts: ["33", "31", "35", "34"], ans: 0 },
+                { q: "The <span class='highlight'>vertebral column</span> protects a delicate bundle of nerves. What is it called?", opts: ["Spinal cord", "Spinal nerve", "Spinal tube", "Backbone nerve"], ans: 0 },
+                { q: "How many pairs of ribs make up the human <span class='highlight-alt'>rib cage</span>?", opts: ["12 pairs", "21 pairs", "12 single bones", "24 pairs"], ans: 0 },
+                { q: "If you count the <span class='highlight'>individual rib bones</span> (not pairs), how many are there?", opts: ["24", "12", "36", "48"], ans: 0 },
+                { q: "Why are the last two pairs of ribs called <span class='highlight'>floating ribs</span>?", opts: ["They are not attached to the breastbone", "They float in the stomach", "They are not attached to the spine", "They are made of soft cartilage"], ans: 0 },
+                { q: "The <span class='highlight-alt'>rib cage</span> acts as a protective cage. Which <span class='highlight'>delicate organs</span> does it protect?", opts: ["Heart and lungs", "Stomach and liver", "Brain and eyes", "Kidneys and intestines"], ans: 0 },
+                { q: "The <span class='highlight'>long, flat bone</span> in the center of the chest to which most ribs attach is called the...", opts: ["Breastbone (Sternum)", "Thighbone (Femur)", "Calf bone (Fibula)", "Hip bone (Pelvis)"], ans: 0 }
             ],
-            "MUL": [
-                { q: "Evaluate: <span class='highlight'>12 × 15</span>", opts: ["160", "170", "180", "190"], ans: 2 },
-                { q: "Evaluate: <span class='highlight'>14 × 11</span>", opts: ["144", "154", "164", "134"], ans: 1 },
-                { q: "Evaluate: <span class='highlight'>25 × 12</span>", opts: ["280", "300", "320", "250"], ans: 1 },
-                { q: "Evaluate: <span class='highlight'>13 × 13</span>", opts: ["159", "169", "179", "149"], ans: 1 },
-                { q: "Evaluate: <span class='highlight'>21 × 14</span>", opts: ["284", "294", "304", "274"], ans: 1 }
+            "LIMBS": [
+                { q: "What is the name of the single long bone in the <span class='highlight'>upper arm</span>?", opts: ["Humerus", "Femur", "Radius", "Ulna"], ans: 0 },
+                { q: "What is the <span class='highlight-alt'>longest, heaviest, and strongest</span> bone in the human body?", opts: ["Femur (Thighbone)", "Humerus (Arm bone)", "Tibia (Shinbone)", "Fibula (Calf bone)"], ans: 0 },
+                { q: "The small bones located in our <span class='highlight'>fingers and toes</span> are known as...", opts: ["Phalanges", "Carpals", "Tarsals", "Metacarpals"], ans: 0 },
+                { q: "How many bones does a single <span class='highlight'>thumb</span> possess?", opts: ["2", "3", "4", "5"], ans: 0 },
+                { q: "What is the scientific name for the <span class='highlight-alt'>kneecap</span>?", opts: ["Patella", "Pelvis", "Phalange", "Tibia"], ans: 0 },
+                { q: "The <span class='highlight'>largest bone</span> found in the human <span class='highlight-alt'>foot</span> is the...", opts: ["Heel bone", "Ankle bone", "Toe bone", "Arch bone"], ans: 0 },
+                { q: "How many long bones make up the <span class='highlight'>lower arm</span>?", opts: ["2 (Radius & Ulna)", "1 (Humerus)", "3 (Carpals included)", "4 (Joint bones included)"], ans: 0 },
+                { q: "How many long bones make up the <span class='highlight'>lower leg</span>?", opts: ["2 (Tibia & Fibula)", "1 (Femur)", "3 (Tarsals included)", "4 (Patella included)"], ans: 0 },
+                { q: "If a bone breaks, doctors use this to keep it <span class='highlight-alt'>completely straight</span> while it heals.", opts: ["Splint or Cast", "Band-aid", "Muscle brace", "Tendon wrap"], ans: 0 },
+                { q: "Which <span class='highlight'>medical imaging technology</span> shows doctors exactly where a bone is broken?", opts: ["X-ray", "Laser scan", "Ultra-scan", "Heat vision"], ans: 0 }
             ],
-            "DIV": [
-                { q: "Evaluate: <span class='highlight-alt'>144 ÷ 12</span>", opts: ["11", "12", "13", "14"], ans: 1 },
-                { q: "Evaluate: <span class='highlight-alt'>105 ÷ 15</span>", opts: ["6", "7", "8", "9"], ans: 1 },
-                { q: "Evaluate: <span class='highlight-alt'>169 ÷ 13</span>", opts: ["12", "13", "14", "15"], ans: 1 },
-                { q: "Evaluate: <span class='highlight-alt'>110 ÷ 11</span>", opts: ["9", "10", "11", "12"], ans: 1 },
-                { q: "Evaluate: <span class='highlight-alt'>126 ÷ 14</span>", opts: ["7", "8", "9", "11"], ans: 2 }
+            "JOINTS": [
+                { q: "The specific place where <span class='highlight'>two or more bones meet</span> is called a...", opts: ["Joint", "Hinge", "Link", "Meeting point"], ans: 0 },
+                { q: "Which part of the body contains <span class='highlight-alt'>fixed (immovable) joints</span>?", opts: ["Skull", "Knee", "Shoulder", "Wrist"], ans: 0 },
+                { q: "Which of these is a classic example of a <span class='highlight'>ball and socket joint</span>?", opts: ["Shoulder joint", "Knee joint", "Elbow joint", "Ankle joint"], ans: 0 },
+                { q: "A <span class='highlight'>hinge joint</span> works just like a door. Where is it located?", opts: ["Elbow and Knee", "Shoulder and Hip", "Neck and Skull", "Wrist and Ankle"], ans: 0 },
+                { q: "The joint that allows you to uniquely <span class='highlight-alt'>turn your head side to side</span> is the...", opts: ["Pivot joint", "Gliding joint", "Hinge joint", "Ball joint"], ans: 0 },
+                { q: "Which joints allow bones to <span class='highlight'>slide smoothly</span> over each other, like in the wrist?", opts: ["Gliding joints", "Sliding joints", "Hinge joints", "Pivot joints"], ans: 0 },
+                { q: "What strong, stretchy bands connect <span class='highlight-alt'>bone to bone</span> at a joint?", opts: ["Ligaments", "Tendons", "Liniments", "Tendrils"], ans: 0 },
+                { q: "What tough, non-stretchy bands connect <span class='highlight-alt'>muscles to bones</span>?", opts: ["Tendons", "Ligaments", "Fibers", "Nerves"], ans: 0 },
+                { q: "What smooth tissue covers the <span class='highlight'>ends of bones</span> to stop them from dangerously rubbing together?", opts: ["Cartilage", "Marrow", "Tendon", "Skin"], ans: 0 },
+                { q: "Unlike a hinge joint, a <span class='highlight'>ball and socket joint</span> uniquely allows movement in...", opts: ["All directions", "Only one direction", "No directions", "Exactly two directions"], ans: 0 }
             ],
-            "ROM": [
-                { q: "What is the Roman numeral for <span class='highlight'>45</span>?", opts: ["XLV", "VL", "XXXXV", "LXV"], ans: 0 },
-                { q: "What number does <span class='highlight'>LXIV</span> represent?", opts: ["44", "54", "64", "74"], ans: 2 },
-                { q: "Evaluate mentally: <span class='highlight'>XXIX + XI</span>", opts: ["XXX", "XL", "L", "XXXXI"], ans: 1 },
-                { q: "What is the Roman numeral for <span class='highlight'>99</span>?", opts: ["IC", "XCIX", "CIX", "LXXXXIX"], ans: 1 },
-                { q: "What number does <span class='highlight'>LXXXVII</span> represent?", opts: ["77", "87", "97", "67"], ans: 1 }
+            "MUSCLES": [
+                { q: "Muscles can only pull, they cannot push. Therefore, to move a bone, muscles must <span class='highlight'>work in</span>...", opts: ["Pairs", "Threes", "Singles", "Fours"], ans: 0 },
+                { q: "Muscles that are under our <span class='highlight-alt'>total control</span>, like arm muscles, are called...", opts: ["Voluntary muscles", "Involuntary muscles", "Non-voluntary muscles", "Unvoluntary muscles"], ans: 0 },
+                { q: "Muscles that work continuously <span class='highlight'>on their own</span> without us thinking about them are...", opts: ["Involuntary muscles", "Voluntary muscles", "Skeletal muscles", "Fast muscles"], ans: 0 },
+                { q: "The special involuntary muscle that endlessly <span class='highlight-alt'>pumps the heart</span> is called...", opts: ["Cardiac muscle", "Stomach muscle", "Blood muscle", "Pumping muscle"], ans: 0 },
+                { q: "Roughly how many <span class='highlight'>muscles</span> are there operating in the human body?", opts: ["Over 600", "Over 200", "Over 400", "Over 800"], ans: 0 },
+                { q: "The <span class='highlight'>correct way</span> to hold your body while sitting, standing, or walking is called...", opts: ["Posture", "Position", "Balance", "Structure"], ans: 0 },
+                { q: "Why is maintaining <span class='highlight'>good posture</span> extremely important?", opts: ["It keeps the spine healthy and aligned", "It makes you look taller only", "It makes bones significantly softer", "It strictly stops heavy breathing"], ans: 0 },
+                { q: "Which vitamin is most crucial for strong bones and is made by our skin in <span class='highlight-alt'>sunlight</span>?", opts: ["Vitamin D", "Vitamin C", "Vitamin A", "Vitamin B"], ans: 0 },
+                { q: "To keep our muscles incredibly strong and healthy, we need a diet highly rich in <span class='highlight'>what nutrient</span>?", opts: ["Proteins", "Fats", "Sugars", "Carbohydrates"], ans: 0 },
+                { q: "Regular <span class='highlight-alt'>physical exercise</span> is highly important because it actively...", opts: ["Strengthens both bones and muscles", "Only strengthens the bones", "Only strengthens the muscles", "Makes all joints extremely stiff"], ans: 0 }
             ]
         };
 
         const secTitles = {
-            "ADD": "Section I: Mental Addition",
-            "SUB": "Section II: Mental Subtraction",
-            "MUL": "Section III: Mental Multiplication",
-            "DIV": "Section IV: Mental Division",
-            "ROM": "Section V: Roman Numerals"
+            "BASICS": "Section I: Bone Basics & Composition",
+            "SPINE_RIBS": "Section II: Skull, Spine & Rib Cage",
+            "LIMBS": "Section III: The Extremities & Limbs",
+            "JOINTS": "Section IV: Joints & Connections",
+            "MUSCLES": "Section V: Muscles, Posture & Care"
         };
 
         // Core Initialization
@@ -551,7 +577,7 @@
                 // Create Tab
                 const tab = document.createElement('button');
                 tab.className = `tab-btn ${isFirst ? 'active' : ''}`;
-                tab.innerText = key;
+                tab.innerText = key.replace('_', ' ');
                 tab.onclick = () => changeSection(key, tab);
                 tabMenu.appendChild(tab);
 
@@ -575,8 +601,8 @@
                         const isRight = (optIndex === item.ans);
                         const isTrueAnsClass = isRight ? 'true-answer' : '';
                         let feedback = isRight 
-                            ? `<span class="highlight" style="background:transparent; padding:0;">Magnificent!</span> "${opt}" is correct.`
-                            : `<span style="color: #F87171; font-weight: 700;">Incorrect.</span> The exact answer is <strong>"${answerText}"</strong>.`;
+                            ? `<span class="highlight" style="background:transparent; padding:0; text-shadow: 0 0 10px rgba(0,255,204,0.6);">Magnificent!</span> "${opt}" is exactly right.`
+                            : `<span style="color: #F87171; font-weight: 700;">Incorrect.</span> The factual answer is <strong>"${answerText}"</strong>.`;
                         
                         optBuilder += `
                             <div class="opt-btn ${isTrueAnsClass}" onclick="handleChoice(this, ${qNum}, ${isRight}, '${answerText}')">
@@ -592,19 +618,19 @@
                         <!-- Lock Overlay -->
                         <div class="q-lock-overlay" id="overlay-${qNum}">
                             <h3>Question ${qNum}</h3>
-                            <button class="unlock-btn" onclick="unlockQuestion(${qNum})">Initialize Question (1:00)</button>
+                            <button class="unlock-btn" onclick="unlockQuestion(${qNum})">Initialize Question (0:30)</button>
                         </div>
                         
                         <!-- Content -->
                         <div class="q-content blurred" id="content-${qNum}">
                             <div class="q-header">
-                                <div class="q-badge">Question ${qNum} / 25</div>
-                                <div class="q-timer" id="timer-${qNum}">⏳ 60s</div>
+                                <div class="q-badge">Question ${qNum} / 50</div>
+                                <div class="q-timer" id="timer-${qNum}">⏳ 30s</div>
                             </div>
                             <div class="q-text">${item.q}</div>
                             <div class="options-container" id="opts-${qNum}">
                                 ${optBuilder}
-                                <div class="missed-alert" id="missed-${qNum}">Time's Up! The exact answer was "${answerText}".</div>
+                                <div class="missed-alert" id="missed-${qNum}">Time's Up! The factual answer was "${answerText}".</div>
                             </div>
                         </div>
                     `;
@@ -626,7 +652,7 @@
             window.scrollTo({ top: 0, behavior: 'smooth' });
         };
 
-        // Per-Question 60s Unlock Logic
+        // Per-Question 30s Unlock Logic
         window.unlockQuestion = function(qNum) {
             if (isAssessmentOver) return;
 
@@ -635,7 +661,7 @@
             
             document.getElementById(`content-${qNum}`).classList.remove('blurred');
             
-            let timeLeft = 60;
+            let timeLeft = 30;
             let timerEl = document.getElementById(`timer-${qNum}`);
             
             questionIntervals[qNum] = setInterval(() => {
@@ -661,14 +687,14 @@
         window.handleChoice = function(element, qNum, isRight, correctTxt) {
             if (lockedAnswers.has(qNum) || isAssessmentOver) return;
 
-            clearInterval(questionIntervals[qNum]); // Stop the 60s timer
+            clearInterval(questionIntervals[qNum]); // Stop the 30s timer
             document.getElementById(`timer-${qNum}`).innerText = "Recorded ✔️";
-            document.getElementById(`timer-${qNum}`).style.color = "var(--bluish-mint)";
+            document.getElementById(`timer-${qNum}`).style.color = "var(--bright-mint)";
             document.getElementById(`timer-${qNum}`).classList.remove('warning');
 
             lockedAnswers.add(qNum);
             answeredQuestions.add(qNum); // Specifically track that they clicked an answer
-            document.getElementById('score-val').innerText = `${lockedAnswers.size}/25`;
+            document.getElementById('score-val').innerText = `${lockedAnswers.size}/50`;
 
             const peers = element.parentElement.querySelectorAll('.opt-btn');
             peers.forEach(p => p.classList.add('locked')); // Disable others visually
@@ -686,12 +712,12 @@
             }
         };
 
-        // Handles 60s timeout locking
+        // Handles 30s timeout locking
         function lockQuestionOut(qNum) {
             if (lockedAnswers.has(qNum)) return;
             
             lockedAnswers.add(qNum);
-            document.getElementById('score-val').innerText = `${lockedAnswers.size}/25`;
+            document.getElementById('score-val').innerText = `${lockedAnswers.size}/50`;
             
             const optsContainer = document.getElementById(`opts-${qNum}`);
             const peers = optsContainer.querySelectorAll('.opt-btn');
@@ -713,7 +739,7 @@
             for (let key in questionIntervals) { clearInterval(questionIntervals[key]); }
             
             // Force lock any untouched questions
-            for (let i = 1; i <= 25; i++) {
+            for (let i = 1; i <= 50; i++) {
                 if(!lockedAnswers.has(i)) {
                     document.getElementById(`timer-${i}`).innerText = "Time's Up 🔒";
                     document.getElementById(`content-${i}`).classList.remove('blurred');
@@ -735,7 +761,7 @@
             const m = Math.floor(timeTakenSecs / 60);
             const s = timeTakenSecs % 60;
             
-            const totalQuestions = 25;
+            const totalQuestions = 50;
             const attempted = answeredQuestions.size; 
             const correct = correctAnswersCount;
             const wrong = attempted - correct;
@@ -752,17 +778,17 @@
             document.getElementById('mod-acc-text').innerText = `${accuracy}%`;
             document.getElementById('mod-time-text').innerText = `${m}m ${s}s`;
             
-            document.getElementById('mod-att-text').innerText = `${attempted}/25`;
+            document.getElementById('mod-att-text').innerText = `${attempted}/50`;
             document.getElementById('mod-correct-text').innerText = correct;
             document.getElementById('mod-wrong-text').innerText = wrong;
             document.getElementById('mod-left-text').innerText = left;
             
             // Generate Message based on Marks
             const msgBox = document.getElementById('mod-msg-text');
-            if (obtainedMarks >= 40) msgBox.innerHTML = "<span class='highlight' style='background:transparent; padding:0;'>Masterclass Tier.</span> Your mental calculation speed and accuracy are absolutely spectacular.";
-            else if (obtainedMarks >= 30) msgBox.innerHTML = "<span class='highlight' style='background:transparent; padding:0; color:var(--yellow); text-shadow:0 0 10px rgba(255,234,0,0.5);'>Exceptional.</span> You demonstrate a highly sophisticated understanding of mental mathematics.";
-            else if (obtainedMarks >= 15) msgBox.innerHTML = "<span class='highlight' style='background:transparent; padding:0; text-shadow:0 0 15px rgba(0,255,204,0.6);'>Strong Competence.</span> Keep practicing to overcome the 60-second pressure threshold.";
-            else msgBox.innerHTML = "<span style='color:#F43F5E; font-weight:700;'>Fundamental Review Needed.</span> Negative marking or time constraints impacted your score. Practice speed arithmetic.";
+            if (obtainedMarks >= 85) msgBox.innerHTML = "<span class='highlight' style='background:transparent; padding:0;'>Masterclass Tier.</span> Your scientific knowledge and conceptual clarity are absolutely spectacular.";
+            else if (obtainedMarks >= 65) msgBox.innerHTML = "<span class='highlight' style='background:transparent; padding:0; color:var(--bright-pink); text-shadow:0 0 10px rgba(255,20,147,0.5);'>Exceptional.</span> You demonstrate a highly sophisticated understanding of the human body.";
+            else if (obtainedMarks >= 35) msgBox.innerHTML = "<span class='highlight' style='background:transparent; padding:0; text-shadow:0 0 15px rgba(0,255,204,0.6);'>Strong Competence.</span> Keep practicing to overcome the 30-second pressure threshold and avoid tricky options.";
+            else msgBox.innerHTML = "<span style='color:#F43F5E; font-weight:700;'>Fundamental Review Needed.</span> Negative marking or time constraints impacted your score. Thoroughly review skeletal basics.";
             
             document.getElementById('result-modal').classList.add('active');
         };
