@@ -92,7 +92,7 @@
         }
         @keyframes pulseCard { from { transform: scale(1); } to { transform: scale(1.015); } }
 
-        .briefing-title { font-family: var(--font-luxury); font-size: 2.5rem; color: var(--white); line-height: 1.1; margin-bottom: 5px; text-shadow: 0 4px 15px rgba(255, 255, 255, 0.4);}
+        .briefing-title { font-family: var(--font-luxury); font-size: 2.5rem; color: var(--white); line-height: 1.1; margin-bottom: 5px; text-shadow: 0 4px 15px rgba(255, 255, 240, 0.4);}
         .briefing-subtitle { color: var(--bright-pink); font-size: 0.85rem; font-weight: 700; letter-spacing: 5px; text-transform: uppercase; margin-bottom: 35px; text-shadow: 0 0 10px rgba(255, 20, 147, 0.4);}
         
         .protocol-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-bottom: 35px; text-align: left; }
@@ -241,7 +241,7 @@
         /* === Floating Dock === */
         .control-dock {
             position: fixed; bottom: 25px; left: 50%; transform: translate3d(-50%, 150px, 0);
-            background: rgba(25, 5, 12, 0.95); backdrop-filter: blur(25px); -webkit-backdrop-filter: blur(25px);
+            background: rgba(20, 5, 12, 0.95); backdrop-filter: blur(25px); -webkit-backdrop-filter: blur(25px);
             border: 1px solid var(--dark-pink); border-top: 1px solid rgba(255, 20, 147, 0.5);
             border-radius: 100px; display: flex; align-items: center; justify-content: space-between;
             padding: 12px 18px; z-index: 100; box-shadow: 0 25px 60px rgba(0,0,0,0.95);
@@ -277,7 +277,7 @@
         /* === Grand Report Modal Redesign === */
         .modal-wrap {
             position: fixed; top: 0; left: 0; width: 100vw; height: 100vh;
-            background: rgba(15, 2, 8, 0.95); backdrop-filter: blur(25px);
+            background: rgba(10, 2, 5, 0.95); backdrop-filter: blur(25px);
             display: flex; justify-content: center; align-items: center;
             z-index: 1000; opacity: 0; pointer-events: none; transition: opacity 0.5s ease;
             overflow-y: auto; padding: 20px;
@@ -348,7 +348,6 @@
         <div class="glow-orb orb-center"></div>
     </div>
 
-    <!-- The Briefing Room -->
     <div class="welcome-screen" id="welcome-overlay">
         <div class="briefing-card">
             <h1 class="briefing-title">Executive Briefing</h1>
@@ -381,7 +380,6 @@
         </div>
     </div>
 
-    <!-- Dashboard -->
     <header>
         <div class="title-wrapper">
             <h1>Science Masterclass</h1>
@@ -400,14 +398,11 @@
     </header>
 
     <main id="quiz-board">
-        <!-- Containers will be generated via JS -->
-    </main>
+        </main>
 
-    <!-- Floating Dock -->
     <div class="control-dock">
         <div class="tab-menu" id="tab-menu-container">
-            <!-- Tabs generated via JS -->
-        </div>
+            </div>
         
         <div class="signature-block">
             <span class="sig-sub">Curated By</span>
@@ -417,7 +412,6 @@
         <button class="report-btn" onclick="generateReport()">Generate Report</button>
     </div>
 
-    <!-- Redesigned Report Modal -->
     <div class="modal-wrap" id="result-modal">
         <div class="modal-card">
             
@@ -466,67 +460,67 @@
         let lockedAnswers = new Set(); 
         let answeredQuestions = new Set(); // Track specifically what was clicked vs timed out
 
-        // 50 Questions tailored for Class 5 Science (Tricky Options)
+        // 50 Questions tailored for Class 5 Science (Fully Randomized Options & Mint Highlights)
         const database = {
             "BASICS": [
-                { q: "A newborn baby has around <span class='highlight'>300 bones</span>. What happens to these bones as the baby <span class='highlight-alt'>grows into an adult</span>?", opts: ["They join together", "They break down", "They shrink away", "They melt into muscles"], ans: 0 },
-                { q: "An adult human skeleton has exactly how many <span class='highlight'>bones</span>?", opts: ["206", "260", "204", "240"], ans: 0 },
-                { q: "Which of these is <span class='highlight-alt'>NOT</span> a main function of the <span class='highlight'>skeletal system</span>?", opts: ["Pumping blood to the body", "Giving shape and support", "Protecting delicate organs", "Helping the body move"], ans: 0 },
-                { q: "Bones are very hard on the outside. Which <span class='highlight'>two minerals</span> make them so hard?", opts: ["Calcium and Phosphorus", "Calcium and Iron", "Potassium and Iron", "Phosphorus and Zinc"], ans: 0 },
-                { q: "What is the <span class='highlight-alt'>soft, jelly-like substance</span> found strictly inside long bones called?", opts: ["Bone marrow", "Bone jelly", "Spongy marrow", "Blood jelly"], ans: 0 },
-                { q: "What highly important cells are produced inside the <span class='highlight'>bone marrow</span>?", opts: ["Blood cells", "Nerve cells", "Muscle cells", "Skin cells"], ans: 0 },
-                { q: "Which part of your body primarily contains <span class='highlight-alt'>long bones</span>?", opts: ["Arms and legs", "Skull and ribs", "Spine and wrist", "Ankles and toes"], ans: 0 },
-                { q: "Where can you specifically find <span class='highlight-alt'>short bones</span> in your body?", opts: ["Wrists and ankles", "Thighs and arms", "Skull and ribs", "Spine and chest"], ans: 0 },
-                { q: "Which of these is a <span class='highlight-alt'>flat bone</span> that acts like a helmet for your <span class='highlight'>brain</span>?", opts: ["Skull", "Pelvis", "Rib cage", "Shoulder blade"], ans: 0 },
-                { q: "In addition to the head, where else are <span class='highlight-alt'>flat bones</span> mainly found?", opts: ["Chest and shoulder blades", "Hands and feet only", "Arms and legs only", "Neck and lower back"], ans: 0 }
+                { q: "A baby has about <span class='highlight'>300 bones</span>, but an adult has only 206. Where do the missing bones go?", opts: ["They melt away into blood", "They fall out like milk teeth", "They fuse together to form larger bones", "They turn into strong muscles"], ans: 2 },
+                { q: "If you were to count every single bone in a completely healthy <span class='highlight'>adult skeleton</span>, the total would be exactly...", opts: ["260", "206", "300", "204"], ans: 1 },
+                { q: "The skeletal system does many amazing things, but which of the following is strictly <span class='highlight-alt'>NOT</span> its job?", opts: ["Protecting the brain and heart", "Giving the body its shape", "Making fresh blood cells", "Pumping blood around the body"], ans: 3 },
+                { q: "If you leave a bone in vinegar, it becomes soft and bendy because it loses a specific <span class='highlight'>hard mineral</span>. Which one?", opts: ["Iron", "Vitamin D", "Calcium", "Protein"], ans: 2 },
+                { q: "Inside the tough outer shell of our long bones lies a soft, jelly-like center called <span class='highlight-alt'>bone marrow</span>. What is its main superhero job?", opts: ["Producing red blood cells", "Storing extra water for the body", "Making the bones super heavy", "Helping the bones bend without breaking"], ans: 0 },
+                { q: "Drinking milk is highly recommended for strong bones. Which <span class='highlight'>two minerals</span> found in milk are the main building blocks of bone?", opts: ["Iron and Zinc", "Calcium and Phosphorus", "Vitamin C and Potassium", "Oxygen and Carbon"], ans: 1 },
+                { q: "Our arms and legs need to act like strong levers to help us run and lift. Which type of bones makes up the <span class='highlight'>major part</span> of our limbs?", opts: ["Flat bones", "Short bones", "Round bones", "Long bones"], ans: 3 },
+                { q: "Imagine tiny, pebble-shaped bones that allow your <span class='highlight'>wrist</span> to freely twist and turn. What category do these belong to?", opts: ["Short bones", "Long bones", "Flat bones", "Irregular bones"], ans: 0 },
+                { q: "Which of the following bones is flat, shaped like a curved shield, and acts as a tough <span class='highlight'>helmet</span> for your brain?", opts: ["The rib cage", "The pelvis", "The skull", "The shoulder blade"], ans: 2 },
+                { q: "If a human suddenly had <span class='highlight-alt'>no skeletal system</span>, what would their body look like?", opts: ["A perfectly normal body that just can't walk", "A giant, shapeless puddle of skin and organs", "A stiff statue made completely of cartilage", "A body that can only roll around"], ans: 1 }
             ],
             "SPINE_RIBS": [
-                { q: "The skull is made of many bones fused together. Which is the <span class='highlight'>ONLY movable bone</span> in the skull?", opts: ["Lower jaw", "Upper jaw", "Inner jaw", "Outer jaw"], ans: 0 },
-                { q: "What is the natural shape of a healthy human <span class='highlight'>spine</span>?", opts: ["S-shape", "C-shape", "J-shape", "Straight line"], ans: 0 },
-                { q: "The <span class='highlight'>backbone</span> is scientifically known as the...", opts: ["Vertebral column", "Spinal cord", "Rib column", "Nervous column"], ans: 0 },
-                { q: "The spine is made up of small bones called <span class='highlight'>vertebrae</span>. How many form the backbone?", opts: ["33", "31", "35", "34"], ans: 0 },
-                { q: "The <span class='highlight'>vertebral column</span> protects a delicate bundle of nerves. What is it called?", opts: ["Spinal cord", "Spinal nerve", "Spinal tube", "Backbone nerve"], ans: 0 },
-                { q: "How many pairs of ribs make up the human <span class='highlight-alt'>rib cage</span>?", opts: ["12 pairs", "21 pairs", "12 single bones", "24 pairs"], ans: 0 },
-                { q: "If you count the <span class='highlight'>individual rib bones</span> (not pairs), how many are there?", opts: ["24", "12", "36", "48"], ans: 0 },
-                { q: "Why are the last two pairs of ribs called <span class='highlight'>floating ribs</span>?", opts: ["They are not attached to the breastbone", "They float in the stomach", "They are not attached to the spine", "They are made of soft cartilage"], ans: 0 },
-                { q: "The <span class='highlight-alt'>rib cage</span> acts as a protective cage. Which <span class='highlight'>delicate organs</span> does it protect?", opts: ["Heart and lungs", "Stomach and liver", "Brain and eyes", "Kidneys and intestines"], ans: 0 },
-                { q: "The <span class='highlight'>long, flat bone</span> in the center of the chest to which most ribs attach is called the...", opts: ["Breastbone (Sternum)", "Thighbone (Femur)", "Calf bone (Fibula)", "Hip bone (Pelvis)"], ans: 0 }
+                { q: "The skull is made of many bones fused tightly together. Which is the <span class='highlight'>ONLY movable bone</span> in your entire head?", opts: ["Upper jaw", "Lower jaw", "Inner jaw", "Outer jaw"], ans: 1 },
+                { q: "If you look at a healthy human <span class='highlight'>spine</span> from the side, what is its natural shape?", opts: ["Straight line", "C-shape", "S-shape", "J-shape"], ans: 2 },
+                { q: "The <span class='highlight'>backbone</span> is scientifically known in biology as the...", opts: ["Spinal cord", "Rib column", "Nervous column", "Vertebral column"], ans: 3 },
+                { q: "The spine is made up of small, interlocking bones called <span class='highlight'>vertebrae</span>. Exactly how many form the backbone?", opts: ["31", "33", "34", "35"], ans: 1 },
+                { q: "The <span class='highlight'>vertebral column</span> acts like a tough tunnel to protect a delicate bundle of nerves. What is this bundle called?", opts: ["Backbone nerve", "Spinal nerve", "Spinal cord", "Spinal tube"], ans: 2 },
+                { q: "Take a deep breath and feel your chest. How many pairs of ribs make up the human <span class='highlight-alt'>rib cage</span>?", opts: ["21 pairs", "12 single bones", "12 pairs", "24 pairs"], ans: 2 },
+                { q: "If you count the <span class='highlight'>individual rib bones</span> one by one (not as pairs), what is the total number?", opts: ["12", "36", "48", "24"], ans: 3 },
+                { q: "Why are the very last two pairs of ribs famously called <span class='highlight'>floating ribs</span>?", opts: ["They float in the stomach", "They are not attached to the spine", "They are not attached to the breastbone", "They are made of soft cartilage"], ans: 2 },
+                { q: "The <span class='highlight-alt'>rib cage</span> acts as a bony prison. Which <span class='highlight'>delicate organs</span> does it primarily protect?", opts: ["Stomach and liver", "Heart and lungs", "Brain and eyes", "Kidneys and intestines"], ans: 1 },
+                { q: "The <span class='highlight'>long, flat bone</span> right in the center of your chest to which most ribs attach is called the...", opts: ["Hip bone (Pelvis)", "Calf bone (Fibula)", "Thighbone (Femur)", "Breastbone (Sternum)"], ans: 3 }
             ],
             "LIMBS": [
-                { q: "What is the name of the single long bone in the <span class='highlight'>upper arm</span>?", opts: ["Humerus", "Femur", "Radius", "Ulna"], ans: 0 },
-                { q: "What is the <span class='highlight-alt'>longest, heaviest, and strongest</span> bone in the human body?", opts: ["Femur (Thighbone)", "Humerus (Arm bone)", "Tibia (Shinbone)", "Fibula (Calf bone)"], ans: 0 },
-                { q: "The small bones located in our <span class='highlight'>fingers and toes</span> are known as...", opts: ["Phalanges", "Carpals", "Tarsals", "Metacarpals"], ans: 0 },
-                { q: "How many bones does a single <span class='highlight'>thumb</span> possess?", opts: ["2", "3", "4", "5"], ans: 0 },
-                { q: "What is the scientific name for the <span class='highlight-alt'>kneecap</span>?", opts: ["Patella", "Pelvis", "Phalange", "Tibia"], ans: 0 },
-                { q: "The <span class='highlight'>largest bone</span> found in the human <span class='highlight-alt'>foot</span> is the...", opts: ["Heel bone", "Ankle bone", "Toe bone", "Arch bone"], ans: 0 },
-                { q: "How many long bones make up the <span class='highlight'>lower arm</span>?", opts: ["2 (Radius & Ulna)", "1 (Humerus)", "3 (Carpals included)", "4 (Joint bones included)"], ans: 0 },
-                { q: "How many long bones make up the <span class='highlight'>lower leg</span>?", opts: ["2 (Tibia & Fibula)", "1 (Femur)", "3 (Tarsals included)", "4 (Patella included)"], ans: 0 },
-                { q: "If a bone breaks, doctors use this to keep it <span class='highlight-alt'>completely straight</span> while it heals.", opts: ["Splint or Cast", "Band-aid", "Muscle brace", "Tendon wrap"], ans: 0 },
-                { q: "Which <span class='highlight'>medical imaging technology</span> shows doctors exactly where a bone is broken?", opts: ["X-ray", "Laser scan", "Ultra-scan", "Heat vision"], ans: 0 }
+                { q: "What is the scientific name of the single, thick long bone located in your <span class='highlight'>upper arm</span>?", opts: ["Femur", "Radius", "Humerus", "Ulna"], ans: 2 },
+                { q: "What is officially the <span class='highlight-alt'>longest, heaviest, and strongest</span> bone in the human body?", opts: ["Humerus (Arm bone)", "Femur (Thighbone)", "Tibia (Shinbone)", "Fibula (Calf bone)"], ans: 1 },
+                { q: "The many small bones located inside our <span class='highlight'>fingers and toes</span> are known as...", opts: ["Carpals", "Tarsals", "Phalanges", "Metacarpals"], ans: 2 },
+                { q: "Look closely at your hand. How many bones does a single <span class='highlight'>thumb</span> possess?", opts: ["3", "4", "2", "5"], ans: 2 },
+                { q: "What is the scientific and medical name for the <span class='highlight-alt'>kneecap</span>?", opts: ["Pelvis", "Phalange", "Tibia", "Patella"], ans: 3 },
+                { q: "The <span class='highlight'>largest bone</span> found hidden inside the human <span class='highlight-alt'>foot</span> is the...", opts: ["Ankle bone", "Heel bone", "Toe bone", "Arch bone"], ans: 1 },
+                { q: "Look at your forearm (between elbow and wrist). How many long bones make up the <span class='highlight'>lower arm</span>?", opts: ["1 (Humerus)", "3 (Carpals included)", "4 (Joint bones included)", "2 (Radius & Ulna)"], ans: 3 },
+                { q: "Feel your shin. How many long bones make up the <span class='highlight'>lower leg</span>?", opts: ["1 (Femur)", "2 (Tibia & Fibula)", "3 (Tarsals included)", "4 (Patella included)"], ans: 1 },
+                { q: "If a bone breaks, doctors wrap it in a hard shell to keep it <span class='highlight-alt'>completely straight</span> while it heals. This is called a...", opts: ["Band-aid", "Muscle brace", "Splint or Cast", "Tendon wrap"], ans: 2 },
+                { q: "Which <span class='highlight'>medical imaging technology</span> allows doctors to look through your skin and see exactly where a bone is broken?", opts: ["Laser scan", "X-ray", "Ultra-scan", "Heat vision"], ans: 1 }
             ],
             "JOINTS": [
-                { q: "The specific place where <span class='highlight'>two or more bones meet</span> is called a...", opts: ["Joint", "Hinge", "Link", "Meeting point"], ans: 0 },
-                { q: "Which part of the body contains <span class='highlight-alt'>fixed (immovable) joints</span>?", opts: ["Skull", "Knee", "Shoulder", "Wrist"], ans: 0 },
-                { q: "Which of these is a classic example of a <span class='highlight'>ball and socket joint</span>?", opts: ["Shoulder joint", "Knee joint", "Elbow joint", "Ankle joint"], ans: 0 },
-                { q: "A <span class='highlight'>hinge joint</span> works just like a door. Where is it located?", opts: ["Elbow and Knee", "Shoulder and Hip", "Neck and Skull", "Wrist and Ankle"], ans: 0 },
-                { q: "The joint that allows you to uniquely <span class='highlight-alt'>turn your head side to side</span> is the...", opts: ["Pivot joint", "Gliding joint", "Hinge joint", "Ball joint"], ans: 0 },
-                { q: "Which joints allow bones to <span class='highlight'>slide smoothly</span> over each other, like in the wrist?", opts: ["Gliding joints", "Sliding joints", "Hinge joints", "Pivot joints"], ans: 0 },
-                { q: "What strong, stretchy bands connect <span class='highlight-alt'>bone to bone</span> at a joint?", opts: ["Ligaments", "Tendons", "Liniments", "Tendrils"], ans: 0 },
-                { q: "What tough, non-stretchy bands connect <span class='highlight-alt'>muscles to bones</span>?", opts: ["Tendons", "Ligaments", "Fibers", "Nerves"], ans: 0 },
-                { q: "What smooth tissue covers the <span class='highlight'>ends of bones</span> to stop them from dangerously rubbing together?", opts: ["Cartilage", "Marrow", "Tendon", "Skin"], ans: 0 },
-                { q: "Unlike a hinge joint, a <span class='highlight'>ball and socket joint</span> uniquely allows movement in...", opts: ["All directions", "Only one direction", "No directions", "Exactly two directions"], ans: 0 }
+                { q: "The specific place where <span class='highlight'>two or more bones meet</span> so we can move is called a...", opts: ["Hinge", "Link", "Joint", "Meeting point"], ans: 2 },
+                { q: "Most joints move, but not all. Which part of the body contains <span class='highlight-alt'>fixed (immovable) joints</span>?", opts: ["Knee", "Shoulder", "Skull", "Wrist"], ans: 2 },
+                { q: "Which of these is a classic example of a <span class='highlight'>ball and socket joint</span>, allowing arm rotation?", opts: ["Knee joint", "Shoulder joint", "Elbow joint", "Ankle joint"], ans: 1 },
+                { q: "A <span class='highlight'>hinge joint</span> works just like a door opening and closing. Where is it located?", opts: ["Shoulder and Hip", "Neck and Skull", "Wrist and Ankle", "Elbow and Knee"], ans: 3 },
+                { q: "The unique joint that allows you to <span class='highlight-alt'>turn your head side to side</span> to say 'no' is the...", opts: ["Gliding joint", "Pivot joint", "Hinge joint", "Ball joint"], ans: 1 },
+                { q: "Which joints allow bones to <span class='highlight'>slide smoothly</span> over each other, like in your wrist and ankle?", opts: ["Sliding joints", "Hinge joints", "Gliding joints", "Pivot joints"], ans: 2 },
+                { q: "What strong, stretchy, rubber-like bands connect <span class='highlight-alt'>bone to bone</span> at a joint?", opts: ["Tendons", "Liniments", "Tendrils", "Ligaments"], ans: 3 },
+                { q: "What tough, non-stretchy bands act like ropes connecting your <span class='highlight-alt'>muscles to your bones</span>?", opts: ["Ligaments", "Fibers", "Tendons", "Nerves"], ans: 2 },
+                { q: "What smooth, slippery tissue covers the <span class='highlight'>ends of bones</span> to stop them from dangerously rubbing together?", opts: ["Marrow", "Cartilage", "Tendon", "Skin"], ans: 1 },
+                { q: "Unlike a hinge joint, a <span class='highlight'>ball and socket joint</span> uniquely allows your limb to move in...", opts: ["Only one direction", "No directions", "Exactly two directions", "All directions"], ans: 3 }
             ],
             "MUSCLES": [
-                { q: "Muscles can only pull, they cannot push. Therefore, to move a bone, muscles must <span class='highlight'>work in</span>...", opts: ["Pairs", "Threes", "Singles", "Fours"], ans: 0 },
-                { q: "Muscles that are under our <span class='highlight-alt'>total control</span>, like arm muscles, are called...", opts: ["Voluntary muscles", "Involuntary muscles", "Non-voluntary muscles", "Unvoluntary muscles"], ans: 0 },
-                { q: "Muscles that work continuously <span class='highlight'>on their own</span> without us thinking about them are...", opts: ["Involuntary muscles", "Voluntary muscles", "Skeletal muscles", "Fast muscles"], ans: 0 },
-                { q: "The special involuntary muscle that endlessly <span class='highlight-alt'>pumps the heart</span> is called...", opts: ["Cardiac muscle", "Stomach muscle", "Blood muscle", "Pumping muscle"], ans: 0 },
-                { q: "Roughly how many <span class='highlight'>muscles</span> are there operating in the human body?", opts: ["Over 600", "Over 200", "Over 400", "Over 800"], ans: 0 },
-                { q: "The <span class='highlight'>correct way</span> to hold your body while sitting, standing, or walking is called...", opts: ["Posture", "Position", "Balance", "Structure"], ans: 0 },
-                { q: "Why is maintaining <span class='highlight'>good posture</span> extremely important?", opts: ["It keeps the spine healthy and aligned", "It makes you look taller only", "It makes bones significantly softer", "It strictly stops heavy breathing"], ans: 0 },
-                { q: "Which vitamin is most crucial for strong bones and is made by our skin in <span class='highlight-alt'>sunlight</span>?", opts: ["Vitamin D", "Vitamin C", "Vitamin A", "Vitamin B"], ans: 0 },
-                { q: "To keep our muscles incredibly strong and healthy, we need a diet highly rich in <span class='highlight'>what nutrient</span>?", opts: ["Proteins", "Fats", "Sugars", "Carbohydrates"], ans: 0 },
-                { q: "Regular <span class='highlight-alt'>physical exercise</span> is highly important because it actively...", opts: ["Strengthens both bones and muscles", "Only strengthens the bones", "Only strengthens the muscles", "Makes all joints extremely stiff"], ans: 0 }
+                { q: "Muscles can only pull, they cannot push. Therefore, to move a bone back and forth, muscles must <span class='highlight'>work in</span>...", opts: ["Threes", "Pairs", "Singles", "Fours"], ans: 1 },
+                { q: "Muscles that are under our <span class='highlight-alt'>total conscious control</span>, like when you decide to lift your arm, are called...", opts: ["Involuntary muscles", "Non-voluntary muscles", "Voluntary muscles", "Unvoluntary muscles"], ans: 2 },
+                { q: "Muscles that work continuously <span class='highlight'>on their own</span> (like digestion) without us thinking about them are...", opts: ["Voluntary muscles", "Involuntary muscles", "Skeletal muscles", "Fast muscles"], ans: 1 },
+                { q: "The special, super-strong involuntary muscle that endlessly <span class='highlight-alt'>pumps the heart</span> is called...", opts: ["Stomach muscle", "Blood muscle", "Pumping muscle", "Cardiac muscle"], ans: 3 },
+                { q: "The body is packed with muscles. Roughly how many <span class='highlight'>muscles</span> are there operating in the human body?", opts: ["Over 200", "Over 400", "Over 600", "Over 800"], ans: 2 },
+                { q: "The <span class='highlight'>correct way</span> to hold your body straight while sitting, standing, or walking is called your...", opts: ["Position", "Posture", "Balance", "Structure"], ans: 1 },
+                { q: "Why is maintaining <span class='highlight'>good posture</span> extremely important for growing children?", opts: ["It makes you look taller only", "It makes bones significantly softer", "It strictly stops heavy breathing", "It keeps the spine healthy and aligned"], ans: 3 },
+                { q: "Which vitamin is most crucial for strong bones and is famously made by our skin when in <span class='highlight-alt'>sunlight</span>?", opts: ["Vitamin C", "Vitamin A", "Vitamin D", "Vitamin B"], ans: 2 },
+                { q: "To keep our muscles incredibly strong and healthy, we need a diet highly rich in <span class='highlight'>what nutrient</span>?", opts: ["Fats", "Proteins", "Sugars", "Carbohydrates"], ans: 1 },
+                { q: "Regular <span class='highlight-alt'>physical exercise</span> is highly important because it actively...", opts: ["Only strengthens the bones", "Only strengthens the muscles", "Strengthens both bones and muscles", "Makes all joints extremely stiff"], ans: 2 }
             ]
         };
 
@@ -615,13 +609,11 @@
                     });
 
                     card.innerHTML = `
-                        <!-- Lock Overlay -->
                         <div class="q-lock-overlay" id="overlay-${qNum}">
                             <h3>Question ${qNum}</h3>
                             <button class="unlock-btn" onclick="unlockQuestion(${qNum})">Initialize Question (0:30)</button>
                         </div>
                         
-                        <!-- Content -->
                         <div class="q-content blurred" id="content-${qNum}">
                             <div class="q-header">
                                 <div class="q-badge">Question ${qNum} / 50</div>
