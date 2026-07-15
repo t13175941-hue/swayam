@@ -92,12 +92,12 @@
         }
         @keyframes pulseCard { from { transform: scale(1); } to { transform: scale(1.015); } }
 
-        .briefing-title { font-family: var(--font-luxury); font-size: 2.5rem; color: var(--ivory); line-height: 1.1; margin-bottom: 5px; text-shadow: 0 4px 15px rgba(255, 255, 240, 0.3);}
+        .briefing-title { font-family: var(--font-luxury); font-size: 2.5rem; color: var(--ivory); line-height: 1.1; margin-bottom: 5px; text-shadow: 0 4px 15px rgba(255, 255, 240, 0.3); }
         .briefing-subtitle { color: var(--yellow); font-size: 0.85rem; font-weight: 700; letter-spacing: 5px; text-transform: uppercase; margin-bottom: 35px; }
         
         .protocol-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-bottom: 35px; text-align: left; }
         .protocol-item { background: rgba(255,255,240,0.03); border: 1px solid var(--glass-border); padding: 20px; border-radius: 12px; transition: transform 0.3s ease, border-color 0.3s, background 0.3s; will-change: transform; }
-        .protocol-item:hover { transform: translateY(-5px); border-color: var(--neon-green); background: rgba(57, 255, 20, 0.05);}
+        .protocol-item:hover { transform: translateY(-5px); border-color: var(--neon-green); background: rgba(57, 255, 20, 0.05); }
         .protocol-icon { font-size: 1.6rem; margin-bottom: 12px; color: var(--yellow); }
         .protocol-title { font-family: var(--font-luxury); font-size: 1.15rem; color: var(--ivory); margin-bottom: 6px; font-weight: 600; }
         .protocol-desc { font-size: 0.85rem; color: var(--text-muted); line-height: 1.5; }
@@ -148,7 +148,7 @@
             box-shadow: 0 10px 25px rgba(0,0,0,0.6); min-width: 130px;
             backdrop-filter: blur(10px);
         }
-        .hud-box small { display: block; color: var(--text-muted); font-size: 0.65rem; letter-spacing: 2px; text-transform: uppercase; font-weight: 600; margin-bottom: 3px;}
+        .hud-box small { display: block; color: var(--text-muted); font-size: 0.65rem; letter-spacing: 2px; text-transform: uppercase; font-weight: 600; margin-bottom: 3px; }
         .hud-box .hud-val { font-family: var(--font-luxury); font-size: 1.9rem; color: var(--neon-green); font-weight: 600; line-height: 1.2; text-shadow: 0 0 20px rgba(57, 255, 20, 0.3); }
 
         #timer-val { animation: pulseTime 1.5s infinite alternate; }
@@ -191,7 +191,7 @@
         .opt-content { display: flex; justify-content: space-between; align-items: center; font-size: 1.1rem; color: var(--ivory); font-weight: 500; transition: color 0.3s; }
 
         .logic-panel { max-height: 0; opacity: 0; overflow: hidden; transition: max-height 0.5s ease, opacity 0.4s ease; font-size: 0.95rem; line-height: 1.6; }
-        .opt-btn.active .logic-panel { max-height: 300px; opacity: 1; margin-top: 15px; padding-top: 15px; border-top: 1px dashed var(--glass-border); color: var(--ivory); }
+        .opt-btn.active .logic-panel { max-height: 400px; opacity: 1; margin-top: 15px; padding-top: 15px; border-top: 1px dashed var(--glass-border); color: var(--ivory); }
 
         .opt-btn.correct { background: var(--correct-grad); border-color: #34D399; box-shadow: 0 5px 20px rgba(6, 214, 160, 0.2); }
         .opt-btn.wrong { background: var(--wrong-grad); border-color: #F87171; box-shadow: 0 5px 20px rgba(239, 71, 111, 0.2); }
@@ -224,7 +224,7 @@
             margin: 0 40px; border-left: 1px solid var(--glass-border); border-right: 1px solid var(--glass-border); padding: 0 40px;
         }
         .sig-sub { font-size: 0.55rem; font-weight: 700; color: var(--text-muted); letter-spacing: 4px; text-transform: uppercase; margin-bottom: 2px; }
-        .sig-main { font-family: var(--font-luxury); font-size: 1.3rem; color: var(--yellow); font-weight: 600; text-transform: uppercase; letter-spacing: 2px; text-shadow: 0 0 15px rgba(255, 234, 0, 0.4);}
+        .sig-main { font-family: var(--font-luxury); font-size: 1.3rem; color: var(--yellow); font-weight: 600; text-transform: uppercase; letter-spacing: 2px; text-shadow: 0 0 15px rgba(255, 234, 0, 0.4); }
 
         .report-btn {
             background: rgba(255, 234, 0, 0.08); color: var(--yellow);
@@ -254,7 +254,7 @@
         }
         .modal-wrap.active .modal-card { transform: translate3d(0, 0, 0) scale(1); }
         
-        .mod-title { font-family: var(--font-luxury); font-size: 2.5rem; color: var(--ivory); margin-bottom: 5px; line-height: 1.2; text-shadow: 0 4px 15px rgba(255, 255, 240, 0.2);}
+        .mod-title { font-family: var(--font-luxury); font-size: 2.5rem; color: var(--ivory); margin-bottom: 5px; line-height: 1.2; text-shadow: 0 4px 15px rgba(255, 255, 240, 0.2); }
         .mod-subtitle { color: var(--yellow); font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 4px; margin-bottom: 30px; }
         
         /* Advanced Report Grids */
@@ -275,7 +275,7 @@
         .wrong-stat h4 { color: #F43F5E; text-shadow: 0 0 15px rgba(244, 63, 94, 0.3); }
         .left-stat h4 { color: var(--text-muted); }
 
-        .mod-desc { color: var(--ivory); font-size: 1.05rem; margin-bottom: 35px; font-weight: 500; line-height: 1.6; background: rgba(57, 255, 20, 0.05); padding: 22px; border-radius: 12px; border: 1px solid var(--glass-border);}
+        .mod-desc { color: var(--ivory); font-size: 1.05rem; margin-bottom: 35px; font-weight: 500; line-height: 1.6; background: rgba(57, 255, 20, 0.05); padding: 22px; border-radius: 12px; border: 1px solid var(--glass-border); }
 
         @media (max-width: 950px) {
             .protocol-grid { grid-template-columns: 1fr; gap: 12px; }
@@ -323,7 +323,7 @@
                 <div class="protocol-item">
                     <div class="protocol-icon">📊</div>
                     <div class="protocol-title">III. Evaluation Metrics</div>
-                    <div class="protocol-desc"><span class="highlight">+2 Marks</span> for correct answers. <span style="color:#F43F5E; font-weight:700;">-1 Mark</span> penalty for incorrect. Unattempted yields <span class="highlight">0</span>.</div>
+                    <div class="protocol-desc"><span class="highlight">+2 Marks</span> for correct answers. <span style="color:#F43F5E; font-weight:700;">-1 Mark</span> penalty for incorrect.</div>
                 </div>
                 <div class="protocol-item">
                     <div class="protocol-icon">📑</div>
@@ -348,7 +348,7 @@
             </div>
             <div class="hud-box">
                 <small>Attempted</small>
-                <div class="hud-val" id="score-val">0/100</div>
+                <div class="hud-val" id="score-val">0/50</div>
             </div>
         </div>
     </header>
@@ -435,134 +435,587 @@
             }, 1000);
         }
 
-        // === 100 Comprehensive Questions Database ===
+        // === 50 Tricky Questions Dataset with 5-6 Digits & High-Precision Explanations ===
         const database = {
             "A": [
-                { q: "The face value of 7 in the numeral <span class='highlight'>4,78,93,215</span> is:", opts: ["70,00,000", "7", "70,000", "7,00,000"], ans: 1 },
-                { q: "<span class='highlight'>One billion</span> is equal to how many crores?", opts: ["10 crores", "1,000 crores", "100 crores", "1 crore"], ans: 2 },
-                { q: "Insert commas correctly according to the International System for <span class='highlight'>seventy million seven thousand seventy</span>:", opts: ["70,007,070", "70,070,070", "7,007,070", "70,007,700"], ans: 0 },
-                { q: "The place value of 0 in <span class='highlight'>98,05,321</span> is:", opts: ["10,000", "0", "1,00,000", "None of these"], ans: 1 },
-                { q: "Write the numeral for: <span class='highlight'>Three hundred million, three thousand and three</span>.", opts: ["300,003,003", "300,300,003", "300,030,003", "30,003,003"], ans: 0 },
-                { q: "What is the difference between the place value and face value of 5 in <span class='highlight'>8,54,321</span>?", opts: ["49,995", "50,005", "5,00,000", "4,99,995"], ans: 3 },
-                { q: "<span class='highlight'>10 Million</span> = ______ Lakhs.", opts: ["1", "100", "10", "1000"], ans: 1 },
-                { q: "The predecessor of the <span class='highlight'>smallest 8-digit number</span> is:", opts: ["99,99,999", "1,00,00,001", "9,99,999", "1,00,00,000"], ans: 0 },
-                { q: "Which of the following represents the number <span class='highlight'>58,403,219</span> in words in the Indian System?", opts: ["Fifty-eight million four hundred three thousand two hundred nineteen", "Five crore eighty-four lakh three thousand two hundred nineteen", "Five crore eighty-four lakh thirty thousand two hundred nineteen", "Fifty-eight crore four lakh three thousand two hundred nineteen"], ans: 1 },
-                { q: "The sum of the place values of two 7s in <span class='highlight'>7,43,729</span> is:", opts: ["7,00,700", "7,07,000", "74,372", "7,00,000"], ans: 0 },
-                { q: "How many <span class='highlight'>6-digit numbers</span> are there in total?", opts: ["9,99,999", "9,00,000", "1,00,000", "8,99,999"], ans: 1 },
-                { q: "The successor of the <span class='highlight'>greatest 7-digit number</span> is:", opts: ["Ten Lakh", "One Crore", "Ten Crore", "One Million"], ans: 1 },
-                { q: "In the International Number System, the period <span class='highlight'>after thousands</span> is:", opts: ["Millions", "Billions", "Lakhs", "Crores"], ans: 0 },
-                { q: "The number <span class='highlight'>23,04,05,007</span> is written in words as:", opts: ["Twenty-three crore four lakh five thousand seven", "Twenty-three crore forty lakh five thousand seven", "Twenty-three million forty thousand five hundred seven", "Two hundred thirty million forty-five thousand seven"], ans: 0 },
-                { q: "How many thousands make a <span class='highlight'>lakh</span>?", opts: ["10", "1000", "100", "10000"], ans: 2 },
-                { q: "Expand the number <span class='highlight'>40,23,005</span> in terms of place values:", opts: ["40,00,000 + 2,00,000 + 3,000 + 5", "40,00,000 + 20,000 + 3,000 + 5", "4,00,000 + 23,000 + 5", "40,00,000 + 20,000 + 300 + 5"], ans: 1 },
-                { q: "Which digit is at the <span class='highlight'>ten-millions place</span> in 847,302,915?", opts: ["8", "4", "7", "3"], ans: 1 },
-                { q: "The number of zeroes in <span class='highlight'>1 Billion</span> is:", opts: ["8", "7", "9", "6"], ans: 2 },
-                { q: "Compare: <span class='highlight'>7,84,32,001 [ ] 78,43,20,001</span>", opts: ["<", ">", "=", "Cannot be determined"], ans: 0 },
-                { q: "What is the standard numeral for <span class='highlight'>9 * 10,00,000 + 4 * 10,000 + 3 * 100 + 7</span>?", opts: ["9,40,307", "90,40,307", "94,00,307", "90,43,007"], ans: 1 },
-                { q: "Arrange in ascending order: <span class='highlight'>X = 45,32,109; Y = 45,23,109; Z = 4,53,21,090</span>", opts: ["X, Y, Z", "Y, X, Z", "Z, X, Y", "Y, Z, X"], ans: 1 },
-                { q: "In the number <span class='highlight'>345,982,167</span>, the digit 9 belongs to which period?", opts: ["Millions", "Ones", "Thousands", "Billions"], ans: 2 },
-                { q: "If 1 crore is divided by <span class='highlight'>1 million</span>, the quotient is:", opts: ["100", "10", "1", "1000"], ans: 1 },
-                { q: "Form the smallest 7-digit number using digits <span class='highlight'>4, 0, 9, 1, 3, 5, 2</span> without repetition:", opts: ["01,23,459", "10,23,459", "12,34,509", "10,23,549"], ans: 1 },
-                { q: "Form the greatest 6-digit number using digits <span class='highlight'>8, 0, 3, 5, 1</span> (repeating 8 twice):", opts: ["8,85,310", "8,58,310", "8,85,301", "8,85,130"], ans: 0 },
-                { q: "What is the place value of the underlined digit: <span class='highlight'>3,84,02,156</span>?", opts: ["80,00,000", "8,00,000", "80,000", "8 Crores"], ans: 0 },
-                { q: "How many zeroes follow the digit 5 when writing <span class='highlight'>'Fifty Crores'</span>?", opts: ["7", "8", "9", "6"], ans: 1 },
-                { q: "The estimation of <span class='highlight'>78,432</span> to the nearest thousands place is:", opts: ["78,400", "78,000", "79,000", "80,000"], ans: 1 },
-                { q: "<span class='highlight'>100 Million</span> is equal to:", opts: ["1 Crore", "10 Crores", "100 Crores", "10 Lakhs"], ans: 1 },
-                { q: "The standard format of writing <span class='highlight'>800,000 + 7,000 + 40 + 2</span> is:", opts: ["807,042", "870,042", "807,402", "87,042"], ans: 0 },
-                { q: "Which digit is in the <span class='highlight'>Lakhs place</span> in 56,72,394?", opts: ["5", "7", "6", "2"], ans: 2 },
-                { q: "In the International System, the number <span class='highlight'>4567231</span> is separated by commas as:", opts: ["4,567,231", "45,67,231", "456,72,31", "4,56,72,31"], ans: 0 },
-                { q: "What is the sum of the <span class='highlight'>face values</span> of all digits in the number 12,345?", opts: ["15", "12345", "15000", "10"], ans: 0 },
-                { q: "<span class='highlight'>100 Lakhs</span> = ________", opts: ["1 Million", "10 Million", "100 Million", "1 Billion"], ans: 1 },
-                { q: "The predecessor of <span class='highlight'>10,00,000</span> is:", opts: ["9,99,999", "99,999", "1,00,001", "9,99,990"], ans: 0 }
+                {
+                    q: "What is the difference between the place value of 7 in the Indian numeral <span class='highlight'>7,45,231</span> and its place value in the International numeral <span class='highlight'>745,231</span>?",
+                    opts: ["0", "700,000", "70,000", "630,000"],
+                    ans: 0,
+                    explanations: [
+                        "Correct! The place value of 7 in the Indian format (7 Lakh) and International format (700 Thousand) both calculate out to exactly 700,000. 700,000 - 700,000 = 0.",
+                        "Incorrect. This completely ignores the International system thousands value allocation.",
+                        "Incorrect. This represents an erratic digital step evaluation index error.",
+                        "Incorrect. This applies a false scale shift reduction factor."
+                    ]
+                },
+                {
+                    q: "Select the standard numeral format matching: <span class='highlight'>Nine hundred thousand nine hundred nine</span>.",
+                    opts: ["900,909", "909,009", "900,990", "990,009"],
+                    ans: 0,
+                    explanations: [
+                        "Correct! Nine hundred thousand places a 900 in the thousands group, and nine hundred nine populates the ones period as 909: 900,909.",
+                        "Incorrect. This reads as nine hundred nine thousand nine.",
+                        "Incorrect. This reads as nine hundred thousand nine hundred ninety.",
+                        "Incorrect. This reads as nine hundred ninety thousand nine."
+                    ]
+                },
+                {
+                    q: "Convert the International system value <span class='highlight'>505,050</span> to the Indian number system writing standard.",
+                    opts: ["5,05,050", "50,50,050", "5,50,050", "50,550"],
+                    ans: 0,
+                    explanations: [
+                        "Correct! In the Indian format, commas cluster at the units block first, then in pairs. 505050 becomes 5,05,050, which reads as Five lakh five thousand fifty.",
+                        "Incorrect. This adds a seventh digit to the expression timeline by accident.",
+                        "Incorrect. This shifts the internal grouping weight allocations off balance.",
+                        "Incorrect. This removes a crucial interior digit frame."
+                    ]
+                },
+                {
+                    q: "Express <span class='highlight'>Eight Lakh Eighty Thousand Eight</span> using International System comma guidelines.",
+                    opts: ["880,008", "808,008", "880,080", "888,008"],
+                    ans: 0,
+                    explanations: [
+                        "Correct! Eight lakh eighty thousand eight equals 8,80,008. Re-indexing into International blocks of three yields 880,008.",
+                        "Incorrect. This represents eight hundred eight thousand eight.",
+                        "Incorrect. This shows eight hundred eighty thousand eighty.",
+                        "Incorrect. This represents eight hundred eighty-eight thousand eight."
+                    ]
+                },
+                {
+                    q: "What is the difference between the place value and face value of 4 in the number <span class='highlight'>4,12,390</span>?",
+                    opts: ["3,99,996", "4,00,000", "3,99,960", "4,00,004"],
+                    ans: 0,
+                    explanations: [
+                        "Correct! The place value of 4 is 4,00,000, and its face value is 4. Thus, 4,00,000 - 4 = 3,99,996.",
+                        "Incorrect. This only returns the isolated place value, neglecting the required subtraction.",
+                        "Incorrect. This subtracts forty instead of the pure digit face value.",
+                        "Incorrect. This performs addition instead of processing the subtraction operation."
+                    ]
+                },
+                {
+                    q: "Which digit shares the exact same place value in both <span class='highlight'>6,54,321</span> (Indian) and <span class='highlight'>654,321</span> (International)?",
+                    opts: ["All of them", "Only 3, 2, and 1", "Only 4, 3, 2, and 1", "None of them"],
+                    ans: 0,
+                    explanations: [
+                        "Correct! The actual numerical value assigned to any absolute position is completely fixed; only comma markings and naming styles shift. Hence, every digit has the same place value.",
+                        "Incorrect. This assumes only the ones period values align, which is visually deceptive.",
+                        "Incorrect. This assumes the thousands place is the ceiling threshold for consistency.",
+                        "Incorrect. The place values are identical in value across both notations."
+                    ]
+                },
+                {
+                    q: "How many zero placeholders are present when writing <span class='highlight'>Three Lakh Three Thousand</span> as a standard numeral?",
+                    opts: ["Three", "Four", "Two", "Five"],
+                    ans: 0,
+                    explanations: [
+                        "Correct! Three Lakh Three Thousand is written out in digits as 3,03,000. This format features exactly three zero elements.",
+                        "Incorrect. This corresponds to 3,00,300 or similar variations.",
+                        "Incorrect. This undercounts the required zeros, creating a smaller number value.",
+                        "Incorrect. This overstates the digit footprint layout."
+                    ]
+                },
+                {
+                    q: "Parse the numeral <span class='highlight'>100,010</span> into the standard Indian System reading format.",
+                    opts: ["One Lakh Ten", "Ten Thousand Ten", "One Lakh One Hundred", "Ten Lakh Ten"],
+                    ans: 0,
+                    explanations: [
+                        "Correct! 100,010 mapped into Indian layout structures yields 1,00,010, which translates precisely to One Lakh Ten.",
+                        "Incorrect. This ignores the true structural magnitude of the final value expression.",
+                        "Incorrect. This shifts the terminal ten value into the hundreds place.",
+                        "Incorrect. This expands the expression scale by a factor of ten."
+                    ]
+                },
+                {
+                    q: "What is the sum of the place values of both 9s in the number <span class='highlight'>9,09,456</span>?",
+                    opts: ["9,09,000", "9,90,000", "9,00,900", "9,09,900"],
+                    ans: 0,
+                    explanations: [
+                        "Correct! The first 9 stands at the Lakhs place (9,00,000) and the second occupies the Thousands slot (9,000). 9,00,000 + 9,000 = 9,09,000.",
+                        "Incorrect. This shifts the secondary nine block up into the ten-thousands column.",
+                        "Incorrect. This downscales the thousands value down into the hundreds category.",
+                        "Incorrect. This introduces extraneous place metrics to the sum template."
+                    ]
+                },
+                {
+                    q: "Select the correct expression for the number <span class='highlight'>765,432</span> in the Indian System.",
+                    opts: ["Seven Lakh Sixty-Five Thousand Four Hundred Thirty-Two", "Seventy-Six Lakh Five Thousand Four Hundred Thirty-Two", "Seven Lakh Six Thousand Five Hundred Thirty-Two", "Seven Million Sixty-Five Thousand Four Hundred Thirty-Two"],
+                    ans: 0,
+                    explanations: [
+                        "Correct! 765,432 rewritten in the Indian style is 7,65,432, which reads as Seven Lakh Sixty-Five Thousand Four Hundred Thirty-Two.",
+                        "Incorrect. This misgroups the primary digit allocations.",
+                        "Incorrect. This drops a vital place indicator value.",
+                        "Incorrect. This mistakenly blends International naming conventions into the response."
+                    ]
+                },
+                {
+                    q: "How many thousands combine to construct exactly <span class='highlight'>Five Lakh</span>?",
+                    opts: ["500", "50", "5,000", "5"],
+                    ans: 0,
+                    explanations: [
+                        "Correct! Five Lakh equals 5,00,000. 500 * 1,000 = 5,00,000. Thus, 500 thousands are required.",
+                        "Incorrect. This only accounts for fifty thousand units total.",
+                        "Incorrect. This scales the structural volume calculation up ten times too high.",
+                        "Incorrect. This maps five thousand instead of five lakh."
+                    ]
+                },
+                {
+                    q: "In the International format number <span class='highlight'>840,200</span>, which period does the digit block 840 inhabit?",
+                    opts: ["Thousands", "Millions", "Ones", "Hundreds"],
+                    ans: 0,
+                    explanations: [
+                        "Correct! In the International standard, digits are split into groups of three. The second grouping from the right is the Thousands period.",
+                        "Incorrect. This position requires an entirely separate digit block further left.",
+                        "Incorrect. The ones period contains the terminal 200 block.",
+                        "Incorrect. 'Hundreds' is an internal column label, not a structural system period."
+                    ]
+                },
+                {
+                    q: "Find the structural predecessor value of the smallest 6-digit number format.",
+                    opts: ["99,999", "100,001", "9,999", "999,999"],
+                    ans: 0,
+                    explanations: [
+                        "Correct! The smallest 6-digit number is 1,00,000. Its mathematical predecessor is 1,00,000 - 1 = 99,999.",
+                        "Incorrect. This represents the successor value instead of the predecessor.",
+                        "Incorrect. This returns the predecessor value benchmark for a 5-digit layout scale.",
+                        "Incorrect. This represents the largest possible 6-digit value boundary."
+                    ]
+                },
+                {
+                    q: "Identify the correct expansion line format for the number value <span class='highlight'>6,05,403</span>.",
+                    opts: ["6 * 100000 + 5 * 1000 + 4 * 100 + 3", "6 * 100000 + 5 * 10000 + 4 * 100 + 3", "6 * 10000 + 5 * 1000 + 4 * 100 + 3", "6 * 100000 + 5 * 1000 + 4 * 10 + 3"],
+                    ans: 0,
+                    explanations: [
+                        "Correct! Resolving place positions: 600,000 + 5,000 + 400 + 3 matches this breakdown.",
+                        "Incorrect. This shifts the 5 value block up into the ten-thousands column.",
+                        "Incorrect. This drops the primary 6 digit value down into the ten-thousands matrix.",
+                        "Incorrect. This downscales the hundreds calculation component to the tens position."
+                    ]
+                },
+                {
+                    q: "Compare the values: <span class='highlight'>456,789 [ ] 4,56,800</span>. Select the matching operational indicator.",
+                    opts: ["<", ">", "=", "None"],
+                    ans: 0,
+                    explanations: [
+                        "Correct! 456,789 is explicitly lower in quantity value than 4,56,800. The less-than token is correct.",
+                        "Incorrect. This falsely assumes the left side asset holds a greater evaluation metrics tier.",
+                        "Incorrect. The values are close but mathematically distinct.",
+                        "Incorrect. A clear relation can be verified between these numbers."
+                    ]
+                },
+                {
+                    q: "Which option contains the correct Indian format comma structure for <span class='highlight'>One hundred ten thousand</span>?",
+                    opts: ["1,10,000", "11,00,00", "110,000", "1,00,100"],
+                    ans: 0,
+                    explanations: [
+                        "Correct! One hundred ten thousand equals 110,000. Formatting into Indian system groupings yields 1,10,000 (One Lakh Ten Thousand).",
+                        "Incorrect. This places a trailing comma group in an illegal notation framework.",
+                        "Incorrect. This leaves the number inside its raw International formatting layout.",
+                        "Incorrect. This distorts the fundamental value composition."
+                    ]
+                },
+                {
+                    q: "Form the smallest possible 5-digit number layout configuration using the digit assets <span class='highlight'>3, 0, 8, 5, 1</span> without repeating any value.",
+                    opts: ["10,358", "01,358", "13,580", "10,538"],
+                    ans: 0,
+                    explanations: [
+                        "Correct! To make the smallest number, place the lowest non-zero digit (1) first, followed by 0, then sort the rest in ascending order: 10,358.",
+                        "Incorrect. Leading with zero reduces the active structural framework down into a 4-digit number tier.",
+                        "Incorrect. This fails to use the zero early enough to minimize the number's scale.",
+                        "Incorrect. This leaves the final digits un-sorted, resulting in a larger final value."
+                    ]
+                }
             ],
             "B": [
-                { q: "The Roman numeral for <span class='highlight'>494</span> is:", opts: ["CDXCIV", "LDXCIV", "DIV", "CCCCXCIV"], ans: 0 },
-                { q: "Which of the following is a <span class='highlight'>meaningless</span> Roman numeral?", opts: ["CLX", "VX", "XIV", "DM"], ans: 1 },
-                { q: "The value of the Roman numeral <span class='highlight'>CMLXIV</span> is:", opts: ["1164", "964", "946", "1064"], ans: 1 },
-                { q: "Convert <span class='highlight'>2026</span> into Roman numerals:", opts: ["MMXXVI", "MMXVI", "MMMXXVI", "MCXXVI"], ans: 0 },
-                { q: "The Roman numeral representing the <span class='highlight'>largest basic symbol value</span> is:", opts: ["M", "D", "C", "X"], ans: 0 },
-                { q: "Solve and choose the correct Roman numeral: <span class='highlight'>CLV + XCIV</span>", opts: ["CCXLIX", "CCLIX", "CCXLI", "CCXLVI"], ans: 0 },
-                { q: "Which symbol can <span class='highlight'>never be repeated</span> in Roman numerals?", opts: ["I", "X", "V", "C"], ans: 2 },
-                { q: "The Hindu-Arabic numeral for <span class='highlight'>CDXLIV</span> is:", opts: ["644", "444", "464", "544"], ans: 1 },
-                { q: "A symbol cannot be repeated more than <span class='highlight'>____ times</span> consecutively.", opts: ["2", "3", "4", "5"], ans: 1 },
-                { q: "When a smaller Roman numeral is placed to the <span class='highlight'>left</span> of a larger one, its value is:", opts: ["Added", "Multiplied", "Subtracted", "Divided"], ans: 2 },
-                { q: "Match the following equivalent: <span class='highlight'>M - D + C</span>", opts: ["600", "400", "1500", "1600"], ans: 0 },
-                { q: "The Roman numeral for <span class='highlight'>99</span> is:", opts: ["IC", "XCIX", "LXLIX", "CIX"], ans: 1 },
-                { q: "Which of the following symbols can be subtracted from <span class='highlight'>D and M only</span>?", opts: ["X", "C", "V", "I"], ans: 1 },
-                { q: "The correct <span class='highlight'>comparison</span> is:", opts: ["XCVII > CX", "CD < CM", "LXVI = XLVI", "MCD > MDC"], ans: 1 },
-                { q: "Convert <span class='highlight'>3,425</span> into Roman numerals:", opts: ["MMMCDXXV", "MMMCCCCXXV", "MMMDXXV", "MMCDXXV"], ans: 0 },
-                { q: "What is <span class='highlight'>LXXVI - XLV</span> in Hindu-Arabic forms?", opts: ["31", "21", "41", "35"], ans: 0 },
-                { q: "The numeral <span class='highlight'>LXVIII</span> is equivalent to:", opts: ["58", "68", "78", "48"], ans: 1 },
-                { q: "Which of the following is <span class='highlight'>correctly written</span>?", opts: ["IL", "XD", "LIV", "VIV"], ans: 2 },
-                { q: "Solve: <span class='highlight'>XC * V</span>", opts: ["CDL", "LD", "CCCC", "CM"], ans: 0 },
-                { q: "The Roman numeral for the standard leap year days (<span class='highlight'>366</span>) is:", opts: ["CCCLXVI", "CCCLVI", "CCXLVI", "MMMCCXVI"], ans: 0 },
-                { q: "What is the value of <span class='highlight'>X * X * X</span>?", opts: ["XXX", "M", "CCC", "None of these"], ans: 3 },
-                { q: "Express the product of <span class='highlight'>12 and 8</span> in Roman system:", opts: ["XCVI", "LXXXVI", "CVI", "XCVII"], ans: 0 },
-                { q: "The symbol I can be subtracted from:", opts: ["V and X only", "X and L only", "V and L only", "All symbols"], ans: 0 },
-                { q: "Write <span class='highlight'>84</span> in Roman notation:", opts: ["LXXXIV", "LXXXVI", "LXIV", "CXXIV"], ans: 0 },
-                { q: "Solve: <span class='highlight'>M / C</span>", opts: ["X", "V", "C", "L"], ans: 0 },
-                { q: "Which of these numbers cannot be represented dynamically without using a <span class='highlight'>bar (vinculum)</span>?", opts: ["3999", "4500", "2888", "Both A and B"], ans: 1 },
-                { q: "Evaluate: <span class='highlight'>DCCLI - CCL</span>", opts: ["DI", "D", "CDLI", "CXXI"], ans: 0 },
-                { q: "If X = 10, L = 50, C = 100, what is <span class='highlight'>C - L - X</span>?", opts: ["XL", "LX", "XXX", "L"], ans: 0 },
-                { q: "Find the <span class='highlight'>odd one out</span>:", opts: ["XLV", "VL", "XXXV", "LV"], ans: 1 },
-                { q: "The Roman numeral for <span class='highlight'>1649</span> is:", opts: ["MDCXLIX", "MDCLIX", "MCDCXLIX", "MDCCXLIX"], ans: 0 }
+                {
+                    q: "Which of the following forms a completely <span class='highlight'>invalid</span> Roman numeral construction?",
+                    opts: ["MCDXLIV", "LLD", "CXXXIX", "CDXCV"],
+                    ans: 1,
+                    explanations: [
+                        "Incorrect. MCDXLIV is valid and translates to 1444.",
+                        "Correct! The symbols L (50), V (5), and D (500) can never be duplicated or repeated consecutively. Thus, LLD is completely illegal.",
+                        "Incorrect. CXXXIX is completely valid and parses to 139.",
+                        "Incorrect. CDXCV is valid and translates directly to 495."
+                    ]
+                },
+                {
+                    q: "What is the correct Roman numeral representation for the value <span class='highlight'>999</span>?",
+                    opts: ["IM", "CMXCIX", "DCCCCLXXXXIX", "CMXCIXT"],
+                    ans: 1,
+                    explanations: [
+                        "Incorrect. The symbol I can only be subtracted from V and X. It can never be subtracted from M.",
+                        "Correct! 999 must be constructed by its component place values: 900 (CM) + 90 (XC) + 9 (IX), which yields CMXCIX.",
+                        "Incorrect. This repeats symbols beyond the maximum permitted allowance parameters.",
+                        "Incorrect. This incorporates invalid structural layout characters."
+                    ]
+                },
+                {
+                    q: "Convert the Roman numeral string <span class='highlight'>CDXLIV</span> into a standard Hindu-Arabic number.",
+                    opts: ["444", "644", "464", "544"],
+                    ans: 0,
+                    explanations: [
+                        "Correct! CD = 400 (500 - 100), XL = 40 (50 - 10), and IV = 4 (5 - 1). 400 + 40 + 4 = 444.",
+                        "Incorrect. This misinterprets the prefix subtraction rules as an addition process.",
+                        "Incorrect. This flips the internal calculation logic tracking direction.",
+                        "Incorrect. This fails to subtract the required values from the anchor characters."
+                    ]
+                },
+                {
+                    q: "Solve the arithmetic problem and choose the correct Roman form: <span class='highlight'>CCXLV + CLXXIV</span>.",
+                    opts: ["CDXIX", "CDXXIX", "CCCCXIX", "CDIX"],
+                    ans: 0,
+                    explanations: [
+                        "Correct! CCXLV = 245 and CLXXIV = 174. 245 + 174 = 419. 419 is written as 400 (CD) + 10 (X) + 9 (IX), yielding CDXIX.",
+                        "Incorrect. This introduces ten extra units into the final summation output.",
+                        "Incorrect. This breaks the consecutive character limit rule by repeating C four times.",
+                        "Incorrect. This drops ten units from the required intermediate sum value."
+                    ]
+                },
+                {
+                    q: "What is the maximum number of times standard symbols like X, I, C, and M can be repeated consecutively?",
+                    opts: ["3", "4", "2", "Unlimited"],
+                    ans: 0,
+                    explanations: [
+                        "Correct! The foundational Roman structural rules strictly dictate that symbols can be repeated at most three times in a consecutive series.",
+                        "Incorrect. This breaks the fundamental repetition cap framework.",
+                        "Incorrect. This understates the repetition limit, which allows up to three items.",
+                        "Incorrect. Uncapped repetition is completely forbidden in standard Roman notation."
+                    ]
+                },
+                {
+                    q: "Convert the numerical quantity value <span class='highlight'>1,649</span> into its correct Roman equivalent.",
+                    opts: ["MDCXLIX", "MDCLIX", "MCDCXLIX", "MDCCXLIX"],
+                    ans: 0,
+                    explanations: [
+                        "Correct! 1,649 is broken down into 1000 (M) + 600 (DC) + 40 (XL) + 9 (IX), forming MDCXLIX.",
+                        "Incorrect. This yields 1,659, which misses the subtraction pattern for forty.",
+                        "Incorrect. This features an invalid, conflicting double-subtraction character string.",
+                        "Incorrect. This creates the value 1,749 instead."
+                    ]
+                },
+                {
+                    q: "Evaluate the mathematical outcome of this expression: <span class='highlight'>MMM - MDCC</span>.",
+                    opts: ["MCCC", "MCC", "MCD", "MD"],
+                    ans: 0,
+                    explanations: [
+                        "Correct! MMM = 3000 and MDCC = 1700. 3000 - 1700 = 1300, which is represented by 1000 (M) + 300 (CCC) = MCCC.",
+                        "Incorrect. This drops one hundred units from the subtraction result ledger.",
+                        "Incorrect. This adds an extra hundred units to the calculation total.",
+                        "Incorrect. This misreads the equation, resulting in 1500."
+                    ]
+                },
+                {
+                    q: "Which Roman subtraction rule definition is completely <span class='highlight'>accurate</span>?",
+                    opts: [
+                        "C can be subtracted from D and M only.",
+                        "X can be subtracted from M directly.",
+                        "V can be subtracted from X to make 5.",
+                        "I can be subtracted from all larger symbols."
+                    ]
+                },
+                {
+                    q: "Convert the value <span class='highlight'>2,444</span> into the Roman numeral tracking system.",
+                    opts: ["MMCDXLIV", "MMCCCCXLIV", "MMCDXLVI", "MMDXLIV"],
+                    ans: 0,
+                    explanations: [
+                        "Correct! 2,444 scales to 2000 (MM) + 400 (CD) + 40 (XL) + 4 (IV), which gives MMCDXLIV.",
+                        "Incorrect. This uses an illegal string of four consecutive C characters.",
+                        "Incorrect. This adds two extra units to the terminal calculation block.",
+                        "Incorrect. This translates to 2,544, missing the subtraction logic for 400."
+                    ]
+                },
+                {
+                    q: "Find the structural value matching: <span class='highlight'>DCCXCVII - CDXCVI</span>.",
+                    opts: ["CCI", "CCCI", "CCXI", "CCX"],
+                    ans: 1,
+                    explanations: [
+                        "Correct! DCCXCVII = 797 and CDXCVI = 496. 797 - 496 = 301. 301 translates directly to CCCI.",
+                        "Incorrect. This evaluates to 201, losing a hundred units during processing.",
+                        "Incorrect. This injects ten unnecessary units into the solution matrix.",
+                        "Incorrect. This drops the single terminal unit indicator completely."
+                    ]
+                },
+                {
+                    q: "What standard number does the Roman string <span class='highlight'>MMMDCCCXXVIII</span> represent?",
+                    opts: ["3,828", "3,628", "3,838", "2,828"],
+                    ans: 0,
+                    explanations: [
+                        "Correct! MMM = 3000, DCCC = 800, XX = 20, and VIII = 8. Adding them together gives 3,828.",
+                        "Incorrect. This miscounts the hundreds block as six hundred instead of eight hundred.",
+                        "Incorrect. This adds ten units to the tens place value position.",
+                        "Incorrect. This misreads the primary thousands baseline indicator block."
+                    ]
+                },
+                {
+                    q: "Which option represents the value <span class='highlight'>449</span> correctly?",
+                    opts: ["CDXLIX", "LDIL", "CCCCXLIX", "CDIL"],
+                    ans: 0,
+                    explanations: [
+                        "Correct! 449 must be expanded by components: 400 (CD) + 40 (XL) + 9 (IX), yielding CDXLIX.",
+                        "Incorrect. This uses L illegally as a subtractive component.",
+                        "Incorrect. This violates the maximum repetition limit rule.",
+                        "Incorrect. This attempts to perform an illegal multi-stage subtraction layout."
+                    ]
+                },
+                {
+                    q: "Evaluate the outcome: <span class='highlight'>MCCXXXIV + DCXLVI</span>.",
+                    opts: ["MDCCCLXXX", "MDCXX", "MDCCCLXX", "MCCCCLXXX"],
+                    ans: 0,
+                    explanations: [
+                        "Correct! MCCXXXIV = 1234 and DCXLVI = 646. 1234 + 646 = 1880. This translates to 1000 (M) + 800 (DCCC) + 80 (LXXX) = MDCCCLXXX.",
+                        "Incorrect. This drops a massive portion of the intermediate sum calculation values.",
+                        "Incorrect. This leaves a deficit of ten units in the final evaluation.",
+                        "Incorrect. This breaks the repetition limit rule in the hundreds column."
+                    ]
+                },
+                {
+                    q: "Determine the correct value for the expression: <span class='highlight'>MMCCXC - MCCL</span>.",
+                    opts: ["MXL", "MCL", "M", "MXX"],
+                    ans: 0,
+                    explanations: [
+                        "Correct! MMCCXC = 2290 and MCCL = 1250. 2290 - 1250 = 1040. 1040 is written as 1000 (M) + 40 (XL) = MXL.",
+                        "Incorrect. This yields 1150 due to an addition error in the columns.",
+                        "Incorrect. This drops the entire remaining tens place value resolution.",
+                        "Incorrect. This under-calculates the final value gap by twenty units."
+                    ]
+                },
+                {
+                    q: "Which Roman numeral string equals exactly <span class='highlight'>1,555</span>?",
+                    opts: ["MDLV", "MCCCCCCLV", "MDL", "MCLV"],
+                    ans: 0,
+                    explanations: [
+                        "Correct! 1,555 is simply built from 1000 (M) + 500 (D) + 50 (L) + 5 (V) = MDLV.",
+                        "Incorrect. This repeats the C character far beyond the maximum allowed limit.",
+                        "Incorrect. This drops the terminal units component entirely.",
+                        "Incorrect. This substitutes one hundred for the required five hundred value block."
+                    ]
+                },
+                {
+                    q: "Solve this equation: <span class='highlight'>MMCD - MCD</span>.",
+                    opts: ["M", "MM", "D", "CM"],
+                    ans: 0,
+                    explanations: [
+                        "Correct! MMCD = 2400 and MCD = 1400. 2400 - 1400 = 1000, which is represented by the single symbol M.",
+                        "Incorrect. This returns double the correct amount due to an error during subtraction.",
+                        "Incorrect. This returns only 500 units, mismanaging the thousand-block logic.",
+                        "Incorrect. This under-calculates the balanced outcome value."
+                    ]
+                }
             ],
             "C": [
-                { q: "Find the sum of <span class='highlight'>43,25,718 and 29,86,415</span>:", opts: ["73,12,133", "72,12,133", "73,11,133", "73,22,133"], ans: 0 },
-                { q: "What must be added to <span class='highlight'>56,12,384</span> to get 90,00,000?", opts: ["33,87,616", "34,87,616", "33,97,616", "43,87,616"], ans: 0 },
-                { q: "The product of <span class='highlight'>4,512 and 307</span> is:", opts: ["13,85,184", "13,58,184", "13,85,084", "14,85,184"], ans: 0 },
-                { q: "A factory produces 4,125 bicycles everyday. How many bicycles does it produce in a <span class='highlight'>non-leap year</span>?", opts: ["15,05,625", "15,09,725", "14,97,375", "15,10,000"], ans: 2 },
-                { q: "Divide <span class='highlight'>8,43,250 by 125</span>. The quotient is:", opts: ["6,746", "6,740", "6,750", "6,706"], ans: 0 },
-                { q: "Find the remainder when <span class='highlight'>5,43,219 is divided by 245</span>:", opts: ["64", "54", "44", "0"], ans: 0 },
-                { q: "If the population of a town was 4,15,230 and it increased by 89,456, what is the <span class='highlight'>new population</span>?", opts: ["5,04,686", "5,04,586", "4,94,686", "5,14,686"], ans: 0 },
-                { q: "Simplify: <span class='highlight'>8,54,321 - 2,15,403 + 1,12,045</span>", opts: ["7,50,963", "7,51,063", "7,49,963", "6,50,963"], ans: 0 },
-                { q: "Find the product of the <span class='highlight'>largest 4-digit number and the smallest 3-digit number</span>:", opts: ["9,99,900", "9,99,000", "9,99,9000", "1,00,000"], ans: 1 },
-                { q: "The cost of 32 flat-screen televisions is <span class='highlight'>₹ 7,84,000</span>. Find the cost of one television.", opts: ["₹ 24,500", "₹ 24,000", "₹ 23,500", "₹ 25,500"], ans: 0 },
-                { q: "A candidate won an election by securing 6,42,105 votes. His nearest rival got 4,83,920 votes. <span class='highlight'>By what margin did he win?</span>", opts: ["1,58,185", "1,58,285", "1,57,185", "2,58,185"], ans: 0 },
-                { q: "Find the value of <span class='highlight'>74,325 * 999</span>:", opts: ["7,42,50,675", "7,43,25,000", "7,42,49,675", "7,41,50,675"], ans: 2 },
-                { q: "In a division sum, Divisor = 255, Quotient = 143, Remainder = 95. <span class='highlight'>Find the Dividend.</span>", opts: ["36,560", "36,465", "36,555", "36,650"], ans: 0 },
-                { q: "A student multiplied 7,236 by 65 instead of multiplying by 56. <span class='highlight'>By how much was his answer greater</span> than the correct answer?", opts: ["65,124", "65,120", "64,124", "72,360"], ans: 0 },
-                { q: "Total revenue collected by a metro station in 3 months is ₹ 93,42,150. If the collection for the first two months was ₹ 32,15,400 and ₹ 29,84,150, <span class='highlight'>find the third month's revenue</span>.", opts: ["₹ 31,42,600", "₹ 31,42,500", "₹ 32,42,600", "₹ 30,42,600"], ans: 0 },
-                { q: "The product of two numbers is 2,49,150. If one number is 45, <span class='highlight'>find the other number</span>.", opts: ["5,536", "5,537", "5,540", "5,535"], ans: 3 },
-                { q: "If a rope of length 45,000 meters is cut into equal pieces of 75 meters each, <span class='highlight'>how many pieces are obtained?</span>", opts: ["600", "6,000", "60", "750"], ans: 0 },
-                { q: "Find the missing digit '*' if: <span class='highlight'>435*2 + 21345 = 64937</span>", opts: ["8", "9", "7", "5"], ans: 0 },
-                { q: "Estimate the sum of 4,32,915 and 2,87,015 to the <span class='highlight'>nearest lakh</span>:", opts: ["7,00,000", "7,20,000", "8,00,000", "6,00,000"], ans: 0 },
-                { q: "Find the value of <span class='highlight'>5,40,932 - 0 + 12,345 * 0</span>:", opts: ["5,40,932", "5,53,277", "0", "5,40,932"], ans: 0 },
-                { q: "What is the average value when <span class='highlight'>1,00,000 is divided equally among 8 people?</span>", opts: ["12,500", "12,000", "11,500", "13,500"], ans: 0 },
-                { q: "A vessel contains 4 liters and 500 ml of milk. In how many glasses, each of <span class='highlight'>25 ml capacity</span>, can it be filled?", opts: ["180", "160", "170", "200"], ans: 0 },
-                { q: "Calculate: <span class='highlight'>9,99,999 + 1,00,001 - 5,00,000</span>", opts: ["6,00,000", "5,99,999", "6,00,001", "5,00,000"], ans: 0 },
-                { q: "Find the number which when divided by 35 gives <span class='highlight'>20 as quotient and 12 as remainder</span>:", opts: ["712", "700", "722", "692"], ans: 0 },
-                { q: "A merchant had ₹ 78,592 with her. She placed an order for purchasing 40 radio sets at ₹ 1,200 each. <span class='highlight'>How much money will remain with her after the purchase?</span>", opts: ["₹ 30,592", "₹ 38,592", "₹ 48,000", "₹ 40,592"], ans: 0 },
-                { q: "What is the value of <span class='highlight'>8,432 * 12 * 0 * 5</span>?", opts: ["5,05,920", "0", "8,432", "42,160"], ans: 1 },
-                { q: "Find the difference between the <span class='highlight'>greatest and least 5-digit numbers</span> that can be written using digits 6, 2, 7, 4, 3 each only once:", opts: ["52,965", "52,865", "53,965", "52,956"], ans: 0 },
-                { q: "If 15 identical boxes weigh 375 kg, what will be the <span class='highlight'>weight of 24 such boxes?</span>", opts: ["600 kg", "580 kg", "590 kg", "620 kg"], ans: 0 },
-                { q: "Find the result of <span class='highlight'>subtracting the predecessor of 5,00,000 from its successor</span>:", opts: ["1", "2", "0", "4,99,999"], ans: 1 },
-                { q: "Box A contains 2,45,120 screws and Box B contains 1,89,560 screws. <span class='highlight'>How many total screws</span> are there in both boxes combined?", opts: ["4,34,680", "4,34,580", "4,33,680", "4,44,680"], ans: 0 },
-                { q: "Solve: <span class='highlight'>7,20,000 / 900</span>", opts: ["80", "800", "8,000", "8"], ans: 1 },
-                { q: "A book exhibition was held for four days in a school. The number of tickets sold at the counter on the first, second, third and final day was 1094, 1812, 2050 and 2751 respectively. <span class='highlight'>Find the total number of tickets sold</span> on all four days:", opts: ["7,707", "7,607", "7,717", "7,807"], ans: 0 },
-                { q: "Find the value of <span class='highlight'>98,45,312 - 45,12,989</span>:", opts: ["53,32,323", "53,32,423", "53,32,223", "52,32,323"], ans: 0 },
-                { q: "The daily cost of feeding animals in a zoo is ₹ 12,450. <span class='highlight'>What is the cost for the month of July?</span>", opts: ["₹ 3,73,500", "₹ 3,85,950", "₹ 3,72,000", "₹ 3,85,900"], ans: 1 },
-                { q: "Find the quotient and remainder respectively when <span class='highlight'>12,43,567 is divided by 10,000</span>:", opts: ["Q = 124, R = 3567", "Q = 1243, R = 567", "Q = 12, R = 43567", "Q = 12435, R = 67"], ans: 1 }
+                {
+                    q: "A wholesale supplier managed two cargo loads. Load A contained <span class='highlight'>1,25,450 boxes</span> and Load B held 2,74,550 boxes. Find the absolute total.",
+                    opts: ["4,00,000 boxes", "3,90,000 boxes", "4,00,100 boxes", "4,10,000 boxes"],
+                    ans: 0,
+                    explanations: [
+                        "Correct! Adding the two inventories: 1,25,450 + 2,74,550 matches exactly to 4,00,000 boxes.",
+                        "Incorrect. This is caused by forgetting to carry over digits across the columns.",
+                        "Incorrect. An error where values are over-added in the hundreds column.",
+                        "Incorrect. This introduces an extra ten-thousand unit carry error."
+                    ]
+                },
+                {
+                    q: "An agricultural cooperative produced <span class='highlight'>4,56,800 kg</span> of wheat. They added another 3,43,200 kg from a secondary harvest. What is the cumulative stock?",
+                    opts: ["8,00,000 kg", "7,90,000 kg", "8,00,200 kg", "9,00,000 kg"],
+                    ans: 0,
+                    explanations: [
+                        "Correct! Direct addition of the weights: 4,56,800 + 3,43,200 yields a sum of 8,00,000 kg.",
+                        "Incorrect. This happens when a digit carryover is missed in the thousands column.",
+                        "Incorrect. This is an arithmetic error caused by mismanaging the initial hundreds values.",
+                        "Incorrect. This overshoots the total calculation threshold by a full lakh."
+                    ]
+                },
+                {
+                    q: "What number must be added to the combined sum of <span class='highlight'>1,12,345 and 6,87,655</span> to reach exactly 9,50,000?",
+                    opts: ["1,50,000", "50,000", "2,50,000", "1,00,000"],
+                    ans: 0,
+                    explanations: [
+                        "Correct! The base sum of the two inputs is 8,00,000. Finding the required amount to reach the target: 9,50,000 - 8,00,000 = 1,50,000.",
+                        "Incorrect. This assumes the base sum already matches 9,00,000.",
+                        "Incorrect. This overestimates the remaining distance to the target by 1,00,000 units.",
+                        "Incorrect. This leaves the final calculation short by 50,000 units."
+                    ]
+                },
+                {
+                    q: "A corporate bank account received three deposits: <span class='highlight'>₹2,50,000</span>, ₹1,85,000, and ₹3,65,000. Calculate the total balance increase.",
+                    opts: ["₹8,00,000", "₹7,00,000", "₹7,90,000", "₹8,10,000"],
+                    ans: 0,
+                    explanations: [
+                        "Correct! Summing the values step-by-step: 2,50,000 + 1,85,000 = 4,35,000. Then 4,35,000 + 3,65,000 = ₹8,00,000.",
+                        "Incorrect. This misses a full lakh digit carry value along the final column.",
+                        "Incorrect. This is an arithmetic mistake caused by a carry mismatch in the ten-thousands column.",
+                        "Incorrect. This over-counts the carry value tracking paths."
+                    ]
+                },
+                {
+                    q: "A construction venture demands <span class='highlight'>6,50,000 bricks</span>. It receives 2,35,400 bricks from Factory X and 3,14,600 from Factory Y. How many bricks are still required?",
+                    opts: ["1,00,000 bricks", "5,50,000 bricks", "2,00,000 bricks", "1,50,000 bricks"],
+                    ans: 0,
+                    explanations: [
+                        "Correct! Sourced bricks total = 2,35,400 + 3,14,600 = 5,50,000. Remaining deficit = 6,50,000 - 5,50,000 = 1,00,000 bricks.",
+                        "Incorrect. This is the total number of bricks already sourced, not the remaining balance.",
+                        "Incorrect. This miscalculates the distance from the target threshold.",
+                        "Incorrect. This occurs if you mistake the total sourced value for 5,00,000."
+                    ]
+                },
+                {
+                    q: "A printing house published <span class='highlight'>1,45,000 books</span> in Week 1, 2,55,000 in Week 2, and double the combined total of both weeks in Week 3. Find Week 3's output.",
+                    opts: ["8,00,000 books", "4,00,000 books", "6,00,000 books", "12,00,000 books"],
+                    ans: 0,
+                    explanations: [
+                        "Correct! Combined Weeks 1 & 2 = 1,45,000 + 2,55,000 = 4,00,000. Week 3 is double that amount: 4,00,000 * 2 = 8,00,000 books.",
+                        "Incorrect. This is just the base sum of the first two weeks, forgetting to apply the doubling multiplier.",
+                        "Incorrect. This multiplies the initial sum by 1.5 instead of 2.",
+                        "Incorrect. This triples the initial sum value instead of doubling it."
+                    ]
+                },
+                {
+                    q: "A government relief camp distributed <span class='highlight'>3,25,750 meals</span> in Month 1, and 4,74,250 meals in Month 2. What is the cumulative total of meals distributed?",
+                    opts: ["8,00,000 meals", "7,99,000 meals", "8,00,100 meals", "7,00,000 meals"],
+                    ans: 0,
+                    explanations: [
+                        "Correct! Direct addition of the two values: 3,25,750 + 4,74,250 = 8,00,000 meals exactly.",
+                        "Incorrect. This happens if you miss carrying digits over in the hundreds column.",
+                        "Incorrect. An error caused by adding too many units during column processing.",
+                        "Incorrect. This drops a full lakh from the total calculation summary."
+                    ]
+                },
+                {
+                    q: "An assembly plant built <span class='highlight'>1,12,500 components</span> in the first half of the year and 2,87,500 components in the second half. Find the yearly output.",
+                    opts: ["4,00,000 components", "3,90,000 components", "4,00,500 components", "5,00,000 components"],
+                    ans: 0,
+                    explanations: [
+                        "Correct! 1,12,500 + 2,87,500 = 4,00,000 components produced across the full year.",
+                        "Incorrect. This is an arithmetic error caused by missing a digit carry value.",
+                        "Incorrect. This adds extra units to the hundreds column during calculation.",
+                        "Incorrect. This overestimates the year's total production by a large margin."
+                    ]
+                },
+                {
+                    q: "A dynamic ledger shows Box X holds <span class='highlight'>5,45,000 units</span>. Box Y contains 3,55,000 units. What is the total combined inventory of both boxes?",
+                    opts: ["9,00,000 units", "8,90,000 units", "9,00,100 units", "10,00,000 units"],
+                    ans: 0,
+                    explanations: [
+                        "Correct! 5,45,000 + 3,55,000 = 9,00,000 units when combined directly.",
+                        "Incorrect. This is an error caused by failing to carry over a digit from the ten-thousands column.",
+                        "Incorrect. This injects extraneous placeholder values into the sum calculation.",
+                        "Incorrect. This overshoots the true mathematical total by a full lakh."
+                    ]
+                },
+                {
+                    q: "A mega dairy collective records <span class='highlight'>2,34,150 liters</span> of output from Unit A, 3,65,850 liters from Unit B, and 1,50,000 liters from Unit C. What is the total yield?",
+                    opts: ["7,50,000 liters", "6,00,000 liters", "7,40,000 liters", "7,50,100 liters"],
+                    ans: 0,
+                    explanations: [
+                        "Correct! Adding the first two units gives: 2,34,150 + 3,65,850 = 6,00,000. Sourcing Unit C: 6,00,000 + 1,50,000 = 7,50,000 liters.",
+                        "Incorrect. This matches the intermediate total for Units A and B, completely forgetting Unit C.",
+                        "Incorrect. This is an arithmetic mistake caused by missing a carry value in the ten-thousands column.",
+                        "Incorrect. This occurs due to an error while processing the hundreds column."
+                    ]
+                },
+                {
+                    q: "A textile merchant bought raw silk for <span class='highlight'>₹4,20,500</span> and cotton yarn for ₹2,79,500. Calculate the merchant's combined investment.",
+                    opts: ["₹7,00,000", "₹6,90,000", "₹7,00,100", "₹8,00,000"],
+                    ans: 0,
+                    explanations: [
+                        "Correct! 4,20,500 + 2,79,500 sums up perfectly to exactly ₹7,00,000.",
+                        "Incorrect. This occurs if you miss a digit carry value in the ten-thousands column.",
+                        "Incorrect. This adds extra units to the hundreds column during step-by-step processing.",
+                        "Incorrect. This overestimates the combined total by an entire lakh."
+                    ]
+                },
+                {
+                    q: "Candidate A received 2,45,600 votes, Candidate B received 3,54,400 votes, and 1,20,000 ballots were blank. What was the <span class='highlight'>total number of ballots cast</span>?",
+                    opts: ["7,20,000 ballots", "6,00,000 ballots", "7,00,000 ballots", "7,20,600 ballots"],
+                    ans: 0,
+                    explanations: [
+                        "Correct! Sum of candidates' votes = 2,45,600 + 3,54,400 = 6,00,000. Total ballots (including blanks) = 6,00,000 + 1,20,000 = 7,20,000 ballots.",
+                        "Incorrect. This calculates only the valid candidate votes, leaving out the blank ballots.",
+                        "Incorrect. An arithmetic mistake where you lose a critical ten-thousand unit carry value.",
+                        "Incorrect. A tracking error caused by miscarrying structural values across columns."
+                    ]
+                },
+                {
+                    q: "A high-tech farm tracked <span class='highlight'>1,15,250 orders</span> in Q1, 2,84,750 in Q2, and 4,00,000 in Q3. Find the three-quarter cumulative total.",
+                    opts: ["8,00,000 orders", "4,00,000 orders", "7,00,000 orders", "8,00,500 orders"],
+                    ans: 0,
+                    explanations: [
+                        "Correct! Q1 + Q2 = 1,15,250 + 2,84,750 = 4,00,000. Adding Q3: 4,00,000 + 4,00,000 = 8,00,000 total orders.",
+                        "Incorrect. This represents only the combined total for Q1 and Q2.",
+                        "Incorrect. This drops the Q1 dataset from the calculation routine entirely.",
+                        "Incorrect. An error caused by miscarrying digits when adding the first two blocks."
+                    ]
+                },
+                {
+                    q: "An e-commerce hub processed <span class='highlight'>5,12,400 shipments</span> in the first half of the month and 3,87,600 in the second half. What is the grand monthly total?",
+                    opts: ["9,00,000 shipments", "8,00,000 shipments", "9,00,200 shipments", "10,00,000 shipments"],
+                    ans: 0,
+                    explanations: [
+                        "Correct! 5,12,400 + 3,87,600 = 9,00,000 shipments processed across the entire month.",
+                        "Incorrect. This drops a massive portion of the intermediate sum calculation values.",
+                        "Incorrect. This results from a carryover digit error when parsing the hundreds column.",
+                        "Incorrect. This overshoots the actual total calculation threshold by a full lakh."
+                    ]
+                },
+                {
+                    q: "A shipping port handled <span class='highlight'>2,67,500 tons</span> of cargo in January, 3,32,500 tons in February, and 2,00,000 tons in March. Find the grand total weight.",
+                    opts: ["8,00,000 tons", "6,00,000 tons", "7,00,000 tons", "8,00,500 tons"],
+                    ans: 0,
+                    explanations: [
+                        "Correct! January + February = 2,67,500 + 3,32,500 = 6,00,000. Sourcing March: 6,00,000 + 2,00,000 = 8,00,000 tons.",
+                        "Incorrect. This is the sum of January and February only, leaving out March.",
+                        "Incorrect. This completely omits the January cargo dataset from the calculation.",
+                        "Incorrect. An error caused by miscarrying digits across columns during summation."
+                    ]
+                },
+                {
+                    q: "What number must be added to the sum of <span class='highlight'>4,15,300 and 3,84,700</span> to reach exactly 9,99,999?",
+                    opts: ["1,99,999", "99,999", "2,99,999", "1,00,000"],
+                    ans: 0,
+                    explanations: [
+                        "Correct! The intermediate sum of 4,15,300 and 3,84,700 is exactly 8,00,000. To find the missing value: 9,99,999 - 8,00,000 = 1,99,999.",
+                        "Incorrect. This assumes the base sum already matches 9,00,000.",
+                        "Incorrect. This over-calculates the target gap by an extra 1,00,000 units.",
+                        "Incorrect. This leaves the final calculation short of the required 9,99,999 target."
+                    ]
+                },
+                {
+                    q: "A local municipality spent <span class='highlight'>₹3,45,600</span> on road repairs and ₹4,54,400 on park maintenance. What was the total expenditure?",
+                    opts: ["₹8,00,000", "₹7,00,000", "₹8,00,200", "₹9,00,000"],
+                    ans: 0,
+                    explanations: [
+                        "Correct! Adding the two expenses directly: 3,45,600 + 4,54,400 sums up perfectly to exactly ₹8,00,000.",
+                        "Incorrect. This occurs if you miss a digit carry value in the ten-thousands column.",
+                        "Incorrect. This adds extra units to the hundreds column during calculation.",
+                        "Incorrect. This overestimates the combined total by an entire lakh."
+                    ]
+                }
             ]
         };
 
         const secBanners = {
-            "A": "Section A: Number Systems",
-            "B": "Section B: Roman Numerals",
-            "C": "Section C: Operations on Large Numbers"
+            "A": "Section A: Number Systems (5-6 Digits)",
+            "B": "Section B: Extended Roman Numerals",
+            "C": "Section C: Advanced Large Number Addition"
         };
 
-        function generateLogic(query, correctText, section) {
-            if (section === 'A') return `In the Number System, precise place value and terminology are critical. <span class="highlight">"${correctText}"</span> perfectly aligns with standard numerical rules.`;
-            if (section === 'B') return `Roman Numerals follow strict combinational rules (e.g., subtractive notation). <span class="highlight">"${correctText}"</span> represents the exact and valid mathematical translation.`;
-            if (section === 'C') return `Arithmetic arithmetic operations require absolute accuracy. <span class="highlight">"${correctText}"</span> is the mathematically definitive outcome.`;
-            return `<span class="highlight">"${correctText}"</span> is the mathematically correct value.`;
+        function getCustomExplanation(section, qIndex, optIndex, isRight, selectedText, answerText) {
+            try {
+                return database[section][qIndex].explanations[optIndex];
+            } catch(e) {
+                if (isRight) {
+                    return `Magnificent! "${selectedText}" is the mathematically definitive outcome for this problem.`;
+                } else {
+                    return `Incorrect choice. You selected "${selectedText}". The absolute correct answer is "${answerText}".`;
+                }
+            }
         }
 
         function loadSection(key) {
             const board = document.getElementById('quiz-board');
             board.innerHTML = `<h2 class="section-banner">${secBanners[key]}</h2>`;
             
-            let offset = key === 'A' ? 1 : key === 'B' ? 36 : 66;
+            let offset = key === 'A' ? 1 : key === 'B' ? 18 : 34;
 
             database[key].forEach((item, index) => {
                 const globalQNum = offset + index;
@@ -572,13 +1025,14 @@
                 
                 let optBuilder = '';
                 const answerText = item.opts[item.ans];
-                const logic = generateLogic(item.q, answerText, key);
 
                 item.opts.forEach((opt, optIndex) => {
                     const isRight = (optIndex === item.ans);
+                    const dynamicExplanation = getCustomExplanation(key, index, optIndex, isRight, opt, answerText);
+                    
                     let feedback = isRight 
-                        ? `<span class="highlight" style="color:var(--neon-green); background:transparent; padding:0; text-shadow:0 0 10px rgba(57,255,20,0.5);">Magnificent.</span> You have correctly identified "${opt}".<br><br><span style="color:var(--yellow); font-weight:700;">Logic Protocol:</span> ${logic}`
-                        : `<span style="color: #F87171; font-weight: 700; text-shadow: 0 0 10px rgba(248, 113, 113, 0.4);">Incorrect.</span> You selected "${opt}". The absolute answer is <strong>"${answerText}"</strong>.<br><br><span style="color:var(--yellow); font-weight:700;">Logic Protocol:</span> ${logic}`;
+                        ? `<span class="highlight" style="color:var(--neon-green); background:transparent; padding:0; text-shadow:0 0 10px rgba(57,255,20,0.5); font-weight:700;">Magnificent!</span><br><br><span style="color:var(--yellow); font-weight:700;">Logic Protocol:</span> ${dynamicExplanation}`
+                        : `<span style="color: #F87171; font-weight: 700; text-shadow: 0 0 10px rgba(248, 113, 113, 0.4);">Incorrect.</span><br><br><span style="color:var(--yellow); font-weight:700;">Analysis:</span> ${dynamicExplanation}`;
                     
                     optBuilder += `
                         <div class="opt-btn" onclick="handleChoice(this, ${globalQNum}, ${isRight})">
@@ -591,7 +1045,7 @@
                 });
 
                 card.innerHTML = `
-                    <div class="q-badge">Question ${globalQNum} / 100</div>
+                    <div class="q-badge">Question ${globalQNum} / 50</div>
                     <div class="q-text">${item.q}</div>
                     <div class="options-container">${optBuilder}</div>
                 `;
@@ -615,10 +1069,9 @@
                     element.classList.add('wrong');
                 }
                 
-                // Track attempt and update HUD
                 if(!lockedAnswers.has(qNum)) {
                     lockedAnswers.add(qNum);
-                    document.getElementById('score-val').innerText = `${lockedAnswers.size}/100`;
+                    document.getElementById('score-val').innerText = `${lockedAnswers.size}/50`;
                 }
             }
         }
@@ -632,26 +1085,21 @@
         window.generateReport = function() {
             clearInterval(timerInterval); 
             
-            // Calculate Time
             const totalSeconds = Math.floor((Date.now() - startTime) / 1000);
             const m = Math.floor(totalSeconds / 60);
             const s = totalSeconds % 60;
             
-            // Calculate Official Metrics
-            const totalQuestions = 100;
+            const totalQuestions = 50;
             const attempted = lockedAnswers.size;
             const correct = correctAnswersCount;
             const wrong = attempted - correct;
             const left = totalQuestions - attempted;
             
-            // Marking Scheme: Correct = +2, Wrong = -1, Left = 0
             const maxMarks = totalQuestions * 2;
             const obtainedMarks = (correct * 2) - (wrong * 1);
             
-            // Accuracy Calculation
             let accuracy = attempted === 0 ? 0 : Math.round((correct / attempted) * 100);
             
-            // Populate Modal Grid
             document.getElementById('mod-marks-text').innerText = `${obtainedMarks}/${maxMarks}`;
             document.getElementById('mod-acc-text').innerText = `${accuracy}%`;
             document.getElementById('mod-time-text').innerText = `${m}m ${s}s`;
@@ -660,12 +1108,11 @@
             document.getElementById('mod-wrong-text').innerText = wrong;
             document.getElementById('mod-left-text').innerText = left;
             
-            // Generate Message based on Marks
             const msgBox = document.getElementById('mod-msg-text');
-            if (obtainedMarks >= 160) msgBox.innerHTML = "<span class='highlight' style='background:transparent; padding:0; text-shadow:0 0 10px rgba(57,255,20,0.5); color:var(--neon-green);'>Masterclass Tier.</span> Your mathematical calculation and conceptual clarity are absolutely spectacular.";
-            else if (obtainedMarks >= 110) msgBox.innerHTML = "<span class='highlight' style='background:transparent; padding:0; text-shadow:0 0 10px rgba(255,234,0,0.5); color:var(--yellow);'>Exceptional.</span> You demonstrate a highly sophisticated understanding of numbers and logic.";
-            else if (obtainedMarks >= 60) msgBox.innerHTML = "<span class='highlight' style='background:transparent; padding:0; text-shadow:0 0 15px rgba(0,255,204,0.6);'>Strong Competence.</span> Keep practicing your calculations to sharpen your edge and increase speed.";
-            else msgBox.innerHTML = "<span style='color:#F43F5E; font-weight:700;'>Fundamental Review Needed.</span> Negative marking impacted your score. Carefully review your arithmetic rules and try again.";
+            if (obtainedMarks >= 80) msgBox.innerHTML = "<span class='highlight' style='background:transparent; padding:0; text-shadow:0 0 10px rgba(57,255,20,0.5); color:var(--neon-green);'>Masterclass Tier.</span> Absolute perfection! Your command over 5-6 digit place value mapping and Roman structural systems is outstanding.";
+            else if (obtainedMarks >= 50) msgBox.innerHTML = "<span class='highlight' style='background:transparent; padding:0; text-shadow:0 0 10px rgba(255,234,0,0.5); color:var(--yellow);'>Exceptional.</span> Strong core reasoning skills. A few minor traps got through your defense, but your calculation pacing is great.";
+            else if (obtainedMarks >= 30) msgBox.innerHTML = "<span class='highlight' style='background:transparent; padding:0; text-shadow:0 0 15px rgba(0,255,204,0.6);'>Competent Build.</span> Good effort. Pay close attention to the subtractive notation of Roman numerals and carryovers.";
+            else msgBox.innerHTML = "<span style='color:#F43F5E; font-weight:700;'>Revision Required.</span> The tricky alternatives caught you off guard. Re-verify your place values and give it another try!";
             
             document.getElementById('result-modal').classList.add('active');
         };
@@ -673,7 +1120,6 @@
         window.hideModal = function() {
             document.getElementById('result-modal').classList.remove('active');
             
-            // Resume clock tracking
             startTime = Date.now() - (parseInt(document.getElementById('mod-time-text').innerText.split('m')[0]) * 60000 + parseInt(document.getElementById('mod-time-text').innerText.split(' ')[1].replace('s','')) * 1000);
             timerInterval = setInterval(() => {
                 const diffInSeconds = Math.floor((Date.now() - startTime) / 1000);
